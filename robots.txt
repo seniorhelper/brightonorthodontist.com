@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block admin or private paths if added in the future
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.brightonorthodontist.com/sitemap.xml
