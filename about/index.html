@@ -1,1 +1,634 @@
-keep
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Dr. Rex Johnson | Brighton Orthodontist | Rex Johnson Orthodontics</title>
+<meta name="description" content="Meet Dr. Rex Johnson — Brighton, Colorado's trusted hometown orthodontist. Learn about his education, credentials, and personal approach to orthodontic care for families.">
+<meta name="keywords" content="Dr. Rex Johnson orthodontist, Brighton CO orthodontist, orthodontist Brighton Colorado, Rex Johnson Orthodontics about, family orthodontist Brighton">
+<link rel="canonical" href="https://www.brightonorthodontist.com/about/">
+
+<meta property="og:title" content="About Dr. Rex Johnson | Brighton Orthodontist">
+<meta property="og:description" content="Meet Brighton, Colorado's hometown orthodontist. Dr. Rex Johnson — personal care, advanced technology, and a genuine love for the community he serves.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.brightonorthodontist.com/about/">
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #0d2b45;
+    --navy-light: #163d61;
+    --teal: #1a8fa0;
+    --teal-light: #24b8cf;
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --cream: #faf7f2;
+    --warm-white: #ffffff;
+    --text-dark: #1a1a2e;
+    --text-mid: #3d4a5c;
+    --text-light: #6b7a8d;
+    --border: #e2ddd6;
+    --shadow: 0 4px 24px rgba(13,43,69,0.10);
+    --shadow-lg: 0 12px 48px rgba(13,43,69,0.16);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.75;
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.2;
+    color: var(--navy);
+  }
+
+  h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 600; }
+  h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 600; }
+  h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 500; }
+
+  p { color: var(--text-mid); margin-bottom: 1.1rem; line-height: 1.78; }
+  a { text-decoration: none; color: inherit; }
+
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(13,43,69,0.07);
+  }
+  .header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 24px; max-width: 1140px; margin: 0 auto;
+  }
+  .logo-block { display: flex; flex-direction: column; }
+  .logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 700; color: var(--navy); letter-spacing: 0.02em;
+  }
+  .logo-tagline { font-size: 0.72rem; color: var(--teal); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+
+  nav { display: flex; gap: 24px; align-items: center; }
+  nav a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); letter-spacing: 0.03em; transition: color 0.2s; }
+  nav a:hover { color: var(--teal); }
+  nav a.active { color: var(--teal); font-weight: 600; }
+
+  .btn-header {
+    background: var(--teal); color: #ffffff !important;
+    padding: 10px 22px; border-radius: 6px;
+    font-size: 0.85rem; font-weight: 700;
+    letter-spacing: 0.04em; transition: background 0.2s; white-space: nowrap;
+  }
+  .btn-header:hover { background: var(--navy); }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; }
+  .mobile-nav {
+    display: none; flex-direction: column;
+    background: var(--warm-white); border-top: 1px solid var(--border);
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    padding: 14px 24px; font-size: 0.95rem; font-weight: 500;
+    color: var(--text-mid); border-bottom: 1px solid var(--border); display: block;
+  }
+  .mobile-nav .btn-header { margin: 16px 24px 20px; display: inline-block; text-align: center; }
+
+  @media (max-width: 768px) {
+    nav { display: none; }
+    .hamburger { display: flex; }
+  }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1a5f7a 100%);
+    padding: 64px 0 60px;
+    position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(26,143,160,0.18) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .page-hero-inner { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+  .page-hero-badge {
+    display: inline-block; background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--gold-light); font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 4px; margin-bottom: 18px;
+  }
+  .page-hero h1 { color: #fff; margin-bottom: 14px; }
+  .page-hero h1 em { color: var(--teal-light); font-style: normal; }
+  .page-hero-sub { color: rgba(255,255,255,0.72); font-size: 1.05rem; max-width: 600px; margin: 0; }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    background: var(--warm-white); border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+  }
+  .breadcrumb-inner {
+    max-width: 1140px; margin: 0 auto; padding: 0 24px;
+    font-size: 0.8rem; color: var(--text-light);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .breadcrumb-inner a { color: var(--teal); transition: color 0.2s; }
+  .breadcrumb-inner a:hover { color: var(--navy); }
+  .breadcrumb-sep { color: var(--border); }
+
+  /* ── TRUST BAR ── */
+  .trust-bar { background: var(--navy); padding: 16px 0; }
+  .trust-bar-inner {
+    max-width: 1140px; margin: 0 auto; padding: 0 24px;
+    display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;
+  }
+  .trust-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.82); font-size: 0.84rem; font-weight: 500; }
+
+  /* ── MAIN CONTENT ── */
+  .section { padding: 72px 0; }
+  .section-alt { background: var(--warm-white); }
+  .section-dark { background: var(--navy); }
+
+  .section-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--teal); margin-bottom: 10px;
+  }
+
+  /* ── ABOUT LAYOUT ── */
+  .about-grid { display: grid; grid-template-columns: 380px 1fr; gap: 64px; align-items: start; }
+  @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } }
+
+  /* Sticky portrait sidebar */
+  .about-sidebar { position: sticky; top: 88px; }
+
+  .doctor-portrait {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--teal) 100%);
+    border-radius: 16px; aspect-ratio: 3/4; max-height: 480px;
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+    padding: 28px 22px; position: relative; overflow: hidden; margin-bottom: 24px;
+  }
+  .doctor-portrait::before {
+    content: '👨‍⚕️';
+    font-size: 8rem; position: absolute; top: 36px; left: 50%; transform: translateX(-50%); opacity: 0.92;
+  }
+  .doctor-portrait-badge {
+    background: rgba(255,255,255,0.13); backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 8px; padding: 16px 20px; text-align: center; width: 100%;
+  }
+  .doctor-portrait-badge strong { color: #fff; display: block; font-size: 1.1rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 2px; }
+  .doctor-portrait-badge span { color: rgba(255,255,255,0.72); font-size: 0.8rem; }
+
+  /* Credential card */
+  .cred-card {
+    background: var(--warm-white); border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px; margin-bottom: 16px;
+  }
+  .cred-card h4 {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal); margin-bottom: 14px;
+  }
+  .cred-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 8px 0; border-bottom: 1px solid var(--border);
+  }
+  .cred-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .cred-check { color: var(--teal); flex-shrink: 0; margin-top: 3px; font-size: 0.9rem; }
+  .cred-item p { margin: 0; font-size: 0.87rem; color: var(--text-mid); line-height: 1.5; }
+  .cred-item strong { color: var(--navy); }
+
+  /* CTA sidebar card */
+  .sidebar-cta {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--navy-light) 100%);
+    border-radius: 10px; padding: 24px; text-align: center;
+  }
+  .sidebar-cta p { color: rgba(255,255,255,0.8); font-size: 0.88rem; margin-bottom: 16px; }
+  .sidebar-cta h4 { color: #fff; font-size: 1.1rem; margin-bottom: 6px; font-family: 'Cormorant Garamond', serif; }
+
+  /* ── COPY BODY ── */
+  .copy-body h2 { margin: 40px 0 14px; }
+  .copy-body h2:first-child { margin-top: 0; }
+  .copy-body h3 { margin: 28px 0 10px; color: var(--navy); }
+  .copy-body p { font-size: 1rem; }
+
+  .inline-link {
+    color: var(--teal); font-weight: 600; border-bottom: 1px solid rgba(26,143,160,0.3);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .inline-link:hover { color: var(--navy); border-color: var(--navy); }
+
+  /* Pull quote */
+  .pull-quote {
+    border-left: 4px solid var(--gold);
+    padding: 18px 24px;
+    background: rgba(201,168,76,0.06);
+    border-radius: 0 8px 8px 0;
+    margin: 28px 0;
+  }
+  .pull-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-style: italic;
+    color: var(--navy); margin: 0; line-height: 1.5;
+  }
+
+  /* Highlight box */
+  .highlight-box {
+    background: var(--warm-white); border: 1px solid var(--border);
+    border-radius: 10px; padding: 28px;
+    margin: 28px 0;
+  }
+  .highlight-box h3 { margin-top: 0; margin-bottom: 12px; }
+
+  /* Values list */
+  .values-list { list-style: none; margin: 0; padding: 0; }
+  .values-list li {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 10px 0; border-bottom: 1px solid var(--border);
+    font-size: 0.95rem; color: var(--text-mid);
+  }
+  .values-list li:last-child { border-bottom: none; }
+  .values-list .val-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+
+  /* ── BUTTONS ── */
+  .btn-primary {
+    background: var(--gold); color: var(--navy);
+    padding: 13px 28px; border-radius: 6px;
+    font-weight: 700; font-size: 0.95rem; letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.15s; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline-navy {
+    border: 2px solid var(--navy); color: var(--navy);
+    padding: 13px 28px; border-radius: 6px;
+    font-weight: 700; font-size: 0.95rem;
+    transition: background 0.2s; display: inline-block;
+  }
+  .btn-outline-navy:hover { background: var(--navy); color: #fff; }
+  .btn-white {
+    background: #fff; color: var(--navy);
+    padding: 13px 28px; border-radius: 6px;
+    font-weight: 700; font-size: 0.95rem;
+    transition: background 0.2s; display: inline-block;
+  }
+  .btn-white:hover { background: var(--gold-light); }
+
+  /* ── FOOTER CTA BAND ── */
+  .cta-band {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%);
+    padding: 64px 0; text-align: center;
+  }
+  .cta-band h2 { color: #fff; margin-bottom: 12px; }
+  .cta-band p { color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto 28px; }
+  .cta-band-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: rgba(255,255,255,0.72); padding: 60px 0 0; }
+  .footer-grid {
+    max-width: 1140px; margin: 0 auto; padding: 0 24px;
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px;
+  }
+  .footer-logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .footer-logo-tag { font-size: 0.75rem; color: var(--teal-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+  .footer-col h4 { color: #fff; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 8px; font-size: 0.88rem; }
+  .footer-col ul li a { color: rgba(255,255,255,0.72); transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--teal-light); }
+  .footer-bottom {
+    max-width: 1140px; margin: 0 auto; padding: 20px 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    font-size: 0.78rem; color: rgba(255,255,255,0.55);
+  }
+  .contact-detail { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 0.88rem; }
+  @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } }
+
+  /* ── ANIMATIONS ── */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .page-hero h1 { animation: fadeUp 0.65s ease both; }
+  .page-hero .page-hero-sub { animation: fadeUp 0.65s 0.15s ease both; }
+</style>
+
+<!-- JSON-LD: About / Person page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.brightonorthodontist.com/about/#webpage",
+      "url": "https://www.brightonorthodontist.com/about/",
+      "name": "About Dr. Rex Johnson | Brighton Orthodontist",
+      "isPartOf": {"@id": "https://www.brightonorthodontist.com/#website"},
+      "about": {"@id": "https://www.brightonorthodontist.com/#doctor"},
+      "description": "Learn about Dr. Rex Johnson, Brighton Colorado's trusted hometown orthodontist. Board-credentialed, University of Minnesota residency, serving families across Adams County.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.brightonorthodontist.com/"},
+          {"@type": "ListItem", "position": 2, "name": "About Dr. Johnson", "item": "https://www.brightonorthodontist.com/about/"}
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.brightonorthodontist.com/#doctor",
+      "name": "Dr. Rex Johnson",
+      "jobTitle": "Orthodontist",
+      "description": "Dr. Rex Johnson is Brighton, Colorado's hometown orthodontist. He earned his Doctorate in Dentistry from the University of Nebraska and completed his orthodontic specialty residency at the University of Minnesota.",
+      "worksFor": {"@id": "https://www.brightonorthodontist.com/#business"},
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "University of Nebraska"},
+        {"@type": "CollegeOrUniversity", "name": "University of Minnesota"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo-block">
+      <span class="logo-name">Rex Johnson Orthodontics</span>
+      <span class="logo-tagline">Brighton, Colorado's Family Orthodontist</span>
+    </a>
+    <nav>
+      <a href="/about/" class="active">About Dr. Johnson</a>
+      <a href="/areas-of-service/">Areas We Serve</a>
+      <a href="/#services">Services</a>
+      <a href="/smile-games/">Smile Games</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact" class="btn-header">Free Consultation</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="/about/">About Dr. Johnson</a>
+    <a href="/areas-of-service/">Areas We Serve</a>
+    <a href="/#services">Services</a>
+    <a href="/smile-games/">Smile Games</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#contact">Request Appointment</a>
+    <a href="tel:3036592142" class="btn-header">📞 (303) 659-2142</a>
+  </div>
+</header>
+
+<!-- ── BREADCRUMB ── -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>About Dr. Johnson</span>
+  </div>
+</nav>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-label="About page hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-badge">&#9733; Meet Your Brighton Orthodontist</div>
+    <h1>Dr. Rex Johnson —<br><em>Brighton's Own</em></h1>
+    <p class="page-hero-sub">A hometown doctor who genuinely knows your name, personally manages your case, and cares about your family's long-term results — not just your next appointment.</p>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">🎓 University of Nebraska — Doctorate in Dentistry</div>
+    <div class="trust-item">🏥 Orthodontic Residency — University of Minnesota</div>
+    <div class="trust-item">📍 481 S. 8th Ave., Brighton, CO 80601</div>
+    <div class="trust-item">📞 <a href="tel:3036592142" style="color:rgba(255,255,255,0.82);">(303) 659-2142</a></div>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- SIDEBAR -->
+      <aside class="about-sidebar reveal">
+
+        <div class="doctor-portrait" role="img" aria-label="Dr. Rex Johnson, Brighton CO Orthodontist">
+          <div class="doctor-portrait-badge">
+            <strong>Dr. Rex Johnson, DDS</strong>
+            <span>Brighton, Colorado Orthodontist</span>
+          </div>
+        </div>
+
+        <div class="cred-card">
+          <h4>Education &amp; Credentials</h4>
+          <div class="cred-item">
+            <span class="cred-check">✓</span>
+            <p><strong>Doctorate in Dentistry</strong><br>University of Nebraska</p>
+          </div>
+          <div class="cred-item">
+            <span class="cred-check">✓</span>
+            <p><strong>Orthodontic Specialty Residency</strong><br>University of Minnesota</p>
+          </div>
+          <div class="cred-item">
+            <span class="cred-check">✓</span>
+            <p><strong>Certified Invisalign Provider</strong><br>Teens &amp; Adults</p>
+          </div>
+          <div class="cred-item">
+            <span class="cred-check">✓</span>
+            <p><strong>Digital &amp; 3D Computer Imaging</strong><br>Advanced diagnostics</p>
+          </div>
+          <div class="cred-item">
+            <span class="cred-check">✓</span>
+            <p><strong>Ongoing Continuing Education</strong><br>Current techniques &amp; technology</p>
+          </div>
+        </div>
+
+        <div class="sidebar-cta">
+          <h4>Ready to Meet Dr. Johnson?</h4>
+          <p>Consultations are always free. No pressure, no obligation.</p>
+          <a href="/#contact" class="btn-white" style="display:block;text-align:center;margin-bottom:12px;">Request Free Consultation</a>
+          <a href="tel:3036592142" style="color:rgba(255,255,255,0.85);font-size:0.88rem;font-weight:600;display:block;text-align:center;">📞 (303) 659-2142</a>
+        </div>
+
+      </aside>
+
+      <!-- COPY BODY -->
+      <div class="copy-body reveal">
+
+        <div class="section-label">About the Doctor</div>
+        <h2>A Brighton Orthodontist Who Puts People First</h2>
+
+        <p>Dr. Rex Johnson has built something rare in modern dentistry. He has built a practice where people actually matter. Rex Johnson Orthodontics is not a corporate chain. It is not a franchise. It is a hometown orthodontic office — right here in Brighton, Colorado — where patients are treated like neighbors, because that is exactly what they are.</p>
+
+        <p>Furthermore, when you come to Rex Johnson Orthodontics, you see Dr. Johnson. Every time. He personally reviews your records, monitors your progress, and makes every treatment decision from start to finish. That kind of continuity is hard to find today. And yet, it is the standard here.</p>
+
+        <div class="pull-quote">
+          <p>"Every patient deserves the same attentive, personalized care I would want for my own family."</p>
+        </div>
+
+        <h2>Education Built on Excellence</h2>
+
+        <p>Dr. Johnson's clinical foundation is strong. He earned his Doctorate in Dentistry from the <strong>University of Nebraska</strong> — one of the Midwest's most respected dental programs. He then went on to complete a highly competitive orthodontic specialty residency at the <strong>University of Minnesota</strong>, which is consistently recognized as one of the top programs in the country.</p>
+
+        <p>As a result, Dr. Johnson entered private practice with both the technical depth and clinical confidence that Brighton families deserve. Additionally, he has never stopped learning. He regularly attends continuing education courses so that his patients always benefit from the most current techniques and technology available in orthodontics today.</p>
+
+        <h2>Technology That Makes a Difference</h2>
+
+        <p>Modern orthodontics has changed dramatically. Therefore, Rex Johnson Orthodontics has kept pace. The practice uses digital records, advanced digital imaging, and 3D computer imaging to plan and execute treatment with exceptional precision.</p>
+
+        <p>In practice, this means fewer surprises. It means shorter treatment times. And it means better outcomes — because Dr. Johnson can see exactly what is happening before he ever adjusts a wire or hands you a new aligner tray.</p>
+
+        <p>For patients interested in a more discreet option, Dr. Johnson is also a <strong>certified Invisalign provider</strong>. Clear aligners have changed the game for adults and teens throughout the Brighton, CO area who want to straighten their teeth without disrupting daily life. Not every patient is a candidate, however. Dr. Johnson evaluates each case individually to determine which treatment will produce the best long-term result.</p>
+
+        <div class="highlight-box">
+          <h3>What Dr. Johnson Treats</h3>
+          <ul class="values-list">
+            <li><span class="val-icon">🔩</span> Traditional metal braces for children, teens, and adults</li>
+            <li><span class="val-icon">💎</span> Clear ceramic braces — effective treatment with a low-profile look</li>
+            <li><span class="val-icon">✨</span> Invisalign® clear aligners for teens and adults</li>
+            <li><span class="val-icon">👶</span> Early orthodontic evaluations starting at age seven</li>
+            <li><span class="val-icon">🛡️</span> Retention and retainers — protecting your results for life</li>
+          </ul>
+        </div>
+
+        <h2>A Practice Built Around Families</h2>
+
+        <p>Rex Johnson Orthodontics welcomes patients of all ages. So whether you're bringing in a seven-year-old for a first evaluation or scheduling your own adult consultation, you are in the right place.</p>
+
+        <p>Interestingly, approximately one in five orthodontic patients in the United States today is an adult. That number keeps growing. The reason is simple: options like Invisalign and clear ceramic braces make treatment far more discreet and manageable for busy adults. Consequently, more Brighton-area adults are finally getting the smile they have always wanted.</p>
+
+        <p>For younger patients, early evaluation matters. The American Association of Orthodontists recommends a first orthodontic screening by age seven. At that age, Dr. Johnson can identify developing jaw issues, crowding, or bite problems while the jaw is still growing and most responsive to treatment. Moreover, early evaluation does not always mean early braces. Often, it simply means having the right information to make smart decisions at the right time.</p>
+
+        <h2>The Rex Johnson Difference</h2>
+
+        <p>There are other orthodontists in the area. Patients still drive 45 minutes specifically to see Dr. Johnson. That says a great deal.</p>
+
+        <p>The reason is straightforward. People can feel the difference between a practice that processes patients and a practice that genuinely invests in them. At Rex Johnson Orthodontics, the staff know your name before you walk in the door. Dr. Johnson remembers where your case left off. And the whole team celebrates your results like they are their own — because, in a sense, they are.</p>
+
+        <p>Beyond that, Rex Johnson Orthodontics offers flexible financing options so that cost is never a barrier between a Brighton family and the care they need. A personalized cost estimate is always provided at the free consultation — with no pressure and no obligation.</p>
+
+        <h2>Serving Brighton and the Surrounding Area</h2>
+
+        <p>The practice is located at <strong>481 S. 8th Ave. in Brighton, Colorado</strong>, and serves families from across Adams County — including Commerce City, Thornton, Fort Lupton, Henderson, Lochbuie, and Keenesburg.</p>
+
+        <p>If you are searching for a trusted <a href="/" class="inline-link">Brighton, CO orthodontist</a> who will treat your family with the same care and attention he gives his own, Rex Johnson Orthodontics is ready to meet you. You can also learn more about <a href="/areas-of-service/" class="inline-link">all the communities we serve across the Brighton area</a>.</p>
+
+        <p>The first step is a free consultation. There is no cost and no commitment required — just an honest conversation about your smile and what is possible. Call <a href="tel:3036592142" class="inline-link">(303) 659-2142</a> or request an appointment online today.</p>
+
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;">
+          <a href="/#contact" class="btn-primary">Request Free Consultation</a>
+          <a href="/areas-of-service/" class="btn-outline-navy">Areas We Serve</a>
+        </div>
+
+      </div>
+      <!-- end copy body -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<section class="cta-band">
+  <div class="container">
+    <div class="section-label" style="color:rgba(255,255,255,0.6)">Get Started Today</div>
+    <h2>Meet Dr. Johnson — At No Charge</h2>
+    <p>Every consultation at Rex Johnson Orthodontics is completely free. Come in, ask your questions, and find out exactly what your smile journey looks like.</p>
+    <div class="cta-band-btns">
+      <a href="/#contact" class="btn-primary">Request Online Consultation</a>
+      <a href="tel:3036592142" style="display:inline-block;padding:13px 28px;border:2px solid rgba(255,255,255,0.5);border-radius:6px;color:#fff;font-weight:700;font-size:0.95rem;">📞 (303) 659-2142</a>
+    </div>
+    <p style="margin-top:20px;color:rgba(255,255,255,0.5);font-size:0.82rem;">481 S. 8th Ave., Brighton, CO 80601 &nbsp;|&nbsp; rjorthodontics@yahoo.com</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo-name">Rex Johnson Orthodontics</div>
+      <div class="footer-logo-tag">Brighton, Colorado's Family Orthodontist</div>
+      <div class="contact-detail">📍 481 S. 8th Ave., Brighton, CO 80601</div>
+      <div class="contact-detail">📞 <a href="tel:3036592142" style="color:rgba(255,255,255,0.65);">(303) 659-2142</a></div>
+      <div class="contact-detail">✉️ <a href="mailto:rjorthodontics@yahoo.com" style="color:rgba(255,255,255,0.65);">rjorthodontics@yahoo.com</a></div>
+      <p style="font-size:0.82rem;margin-top:12px;color:rgba(255,255,255,0.55);">Serving Brighton, Commerce City, Thornton, Fort Lupton, Henderson, Lochbuie &amp; surrounding Adams County communities.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/areas-of-service/">Traditional Metal Braces</a></li>
+        <li><a href="/areas-of-service/">Clear Ceramic Braces</a></li>
+        <li><a href="/areas-of-service/">Invisalign® Aligners</a></li>
+        <li><a href="/areas-of-service/">Children's Orthodontics</a></li>
+        <li><a href="/areas-of-service/">Teen Orthodontics</a></li>
+        <li><a href="/areas-of-service/">Adult Orthodontics</a></li>
+        <li><a href="/areas-of-service/">Orthodontic Retainers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Practice</h4>
+      <ul>
+        <li><a href="/about/">Meet Dr. Johnson</a></li>
+        <li><a href="/#contact">Free Consultation</a></li>
+        <li><a href="/#faq">Patient FAQ</a></li>
+        <li><a href="/areas-of-service/">Areas We Serve</a></li>
+        <li><a href="/smile-games/">Smile Games</a></li>
+        <li><a href="/#contact">Contact &amp; Location</a></li>
+      </ul>
+      <h4 style="margin-top:20px;">Quick Contact</h4>
+      <ul>
+        <li><a href="tel:3036592142">(303) 659-2142</a></li>
+        <li><a href="mailto:rjorthodontics@yahoo.com">rjorthodontics@yahoo.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Rex Johnson Orthodontics — Brighton, CO Orthodontist. All rights reserved.</span>
+    <span>Website by <a href="https://eyetoad.com" style="color:rgba(255,255,255,0.35);" rel="noopener">Eye To Ad Media</a> — Brighton SEO &amp; Digital Marketing</span>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('mobileNav');
+    const hamburger = document.querySelector('.hamburger');
+    const isOpen = nav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    nav.setAttribute('aria-hidden', !isOpen);
+  }
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+
+</body>
+</html>
