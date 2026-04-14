@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brighton Orthodontist | Rex Johnson Orthodontics | Brighton, CO</title>
 <meta name="description" content="Brighton CO orthodontist Dr. Rex Johnson offers braces, Invisalign, and clear aligners for kids, teens & adults. Family orthodontics in Brighton, Colorado. Call (303) 659-2142.">
-<meta name="keywords" content="Brighton orthodontist, orthodontics Brighton CO, Brighton CO orthodontics, braces Brighton Colorado, Invisalign Brighton CO, orthodontist near me Brighton, Rex Johnson Orthodontics">
+<meta name="keywords" content="Brighton orthodontist, orthodontist Brighton Colorado, Brighton CO orthodontics, braces Brighton CO, Invisalign Brighton CO, orthodontist near me Brighton, children's orthodontist Brighton, adult orthodontics Brighton Colorado, clear aligners Brighton CO, Rex Johnson Orthodontics, Adams County orthodontist, Fort Lupton orthodontist, Henderson CO orthodontist">
 <link rel="canonical" href="https://www.brightonorthodontist.com/">
 
 <!-- Open Graph -->
@@ -14,18 +14,23 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.brightonorthodontist.com/">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.brightonorthodontist.com/og-image.jpg">
 
-<!-- Google Search Console Verification -->
-<meta name="google-site-verification" content="a couple of the ones i gave you didnt work">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brighton Orthodontist | Rex Johnson Orthodontics">
+<meta name="twitter:description" content="Braces, Invisalign & clear aligners for Brighton, CO families. Free consultation — call (303) 659-2142.">
 
-<!-- REPLACE THE ABOVE WITH YOUR ACTUAL GSC CODE — user will paste it in -->
+<!-- Google Search Console Verification — REPLACE WITH YOUR ACTUAL GSC CODE -->
+<meta name="google-site-verification" content="YOUR_GSC_VERIFICATION_CODE_HERE">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<!-- FormSubmit — no backend needed, routes to info@rexjohnsonortho.com -->
+<!-- Sitemap reference -->
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
 <style>
   :root {
@@ -46,7 +51,6 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -79,12 +83,10 @@
     position: sticky; top: 0; z-index: 100;
     box-shadow: 0 2px 12px rgba(13,43,69,0.07);
   }
-
   .header-inner {
     display: flex; align-items: center; justify-content: space-between;
     padding: 16px 24px; max-width: 1140px; margin: 0 auto;
   }
-
   .logo-block { display: flex; flex-direction: column; }
   .logo-name {
     font-family: 'Cormorant Garamond', serif;
@@ -93,34 +95,30 @@
   }
   .logo-tagline { font-size: 0.72rem; color: var(--teal); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
 
-  nav { display: flex; gap: 28px; align-items: center; }
+  nav { display: flex; gap: 24px; align-items: center; }
   nav a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); letter-spacing: 0.03em; transition: color 0.2s; }
   nav a:hover { color: var(--teal); }
-  nav a.btn-header,
-  nav a.btn-header:hover { color: #ffffff; }
+  nav a.btn-header, nav a.btn-header:hover { color: #ffffff; }
 
   .btn-header {
     background: var(--teal); color: #ffffff !important;
     padding: 10px 22px; border-radius: 6px;
     font-size: 0.85rem; font-weight: 700;
     letter-spacing: 0.04em; transition: background 0.2s;
-    white-space: nowrap; text-shadow: none;
+    white-space: nowrap;
   }
   .btn-header:hover { background: var(--navy); color: #ffffff !important; }
 
-  /* Mobile menu */
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
   .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
   .mobile-nav {
     display: none; flex-direction: column; gap: 0;
     background: var(--warm-white); border-top: 1px solid var(--border);
-    padding: 0;
   }
   .mobile-nav.open { display: flex; }
   .mobile-nav a {
     padding: 14px 24px; font-size: 0.95rem; font-weight: 500;
-    color: var(--text-mid); border-bottom: 1px solid var(--border);
-    display: block;
+    color: var(--text-mid); border-bottom: 1px solid var(--border); display: block;
   }
   .mobile-nav .btn-header { margin: 16px 24px 20px; display: inline-block; text-align: center; }
 
@@ -141,7 +139,6 @@
     background: radial-gradient(ellipse at 80% 50%, rgba(26,143,160,0.18) 0%, transparent 65%);
     pointer-events: none;
   }
-  /* Decorative circles */
   .hero-deco {
     position: absolute; border-radius: 50%;
     border: 1px solid rgba(255,255,255,0.06);
@@ -189,12 +186,11 @@
   .hero-stat { flex: 1; }
   .hero-stat-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem; font-weight: 700; color: var(--gold-light);
-    line-height: 1;
+    font-size: 2rem; font-weight: 700; color: var(--gold-light); line-height: 1;
   }
   .hero-stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
 
-  /* Hero Form Card */
+  /* Hero Form */
   .hero-form-card {
     background: var(--warm-white);
     border-radius: 12px; padding: 32px 28px;
@@ -213,16 +209,14 @@
     transition: border-color 0.2s;
   }
   .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    outline: none; border-color: var(--teal);
-    background: #fff;
+    outline: none; border-color: var(--teal); background: #fff;
   }
   .form-group textarea { resize: vertical; min-height: 70px; }
   .btn-form {
     width: 100%; background: var(--teal); color: #fff;
     padding: 13px; border: none; border-radius: 6px;
     font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 700;
-    letter-spacing: 0.04em; cursor: pointer;
-    transition: background 0.2s;
+    letter-spacing: 0.04em; cursor: pointer; transition: background 0.2s;
   }
   .btn-form:hover { background: var(--navy); }
   .form-privacy { font-size: 0.72rem; color: var(--text-light); text-align: center; margin-top: 10px; }
@@ -234,10 +228,7 @@
   }
 
   /* ── TRUST BAR ── */
-  .trust-bar {
-    background: var(--navy);
-    padding: 18px 0;
-  }
+  .trust-bar { background: var(--navy); padding: 18px 0; }
   .trust-bar-inner {
     max-width: 1140px; margin: 0 auto; padding: 0 24px;
     display: flex; justify-content: space-between; align-items: center;
@@ -263,14 +254,12 @@
 
   /* ── SERVICES GRID ── */
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-
   .service-card {
     background: var(--cream); border: 1px solid var(--border);
     border-radius: 10px; padding: 32px 26px;
     transition: transform 0.2s, box-shadow 0.2s;
   }
   .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-
   .service-icon {
     width: 52px; height: 52px; border-radius: 10px;
     background: linear-gradient(135deg, var(--teal) 0%, var(--navy-light) 100%);
@@ -279,13 +268,17 @@
   }
   .service-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
   .service-card p { font-size: 0.9rem; color: var(--text-mid); }
+  .service-card .service-link {
+    display: inline-block; margin-top: 12px; font-size: 0.85rem;
+    color: var(--teal); font-weight: 600; transition: color 0.2s;
+  }
+  .service-card .service-link:hover { color: var(--navy); }
 
   @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
   @media (min-width: 480px) and (max-width: 768px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
 
-  /* ── ABOUT / DR SECTION ── */
+  /* ── ABOUT ── */
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-
   .about-portrait {
     background: linear-gradient(160deg, var(--navy) 0%, var(--teal) 100%);
     border-radius: 16px; aspect-ratio: 3/4; max-height: 460px;
@@ -304,7 +297,6 @@
   }
   .about-portrait-badge strong { color: #fff; display: block; font-size: 1.05rem; font-family: 'Cormorant Garamond', serif; }
   .about-portrait-badge span { color: rgba(255,255,255,0.7); font-size: 0.8rem; }
-
   .credential-list { margin: 24px 0; }
   .credential-item {
     display: flex; align-items: flex-start; gap: 12px;
@@ -313,139 +305,130 @@
   .credential-item:last-child { border-bottom: none; }
   .credential-check { color: var(--teal); font-size: 1rem; margin-top: 2px; flex-shrink: 0; }
   .credential-item p { margin: 0; font-size: 0.92rem; }
-
   @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
 
-  /* ── CHARTS SECTION ── */
+  /* ── CHARTS ── */
   .charts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-
   .chart-card {
     background: var(--cream); border: 1px solid var(--border);
     border-radius: 10px; padding: 28px 24px; text-align: center;
   }
   .chart-card h4 { font-size: 1rem; margin-bottom: 20px; color: var(--navy); }
-
-  /* Bar chart CSS-only */
   .bar-chart { display: flex; align-items: flex-end; justify-content: center; gap: 12px; height: 120px; margin-bottom: 0; }
   .bar-wrap { display: flex; flex-direction: column; align-items: center; flex: 1; }
   .bar-wrap-inner { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 120px; width: 100%; }
-  .bar {
-    width: 100%; border-radius: 4px 4px 0 0;
-    transition: height 0.3s;
-  }
-  .bar-before { background: linear-gradient(to top, #b0bec5, #cfd8dc); }
-  .bar-after { background: linear-gradient(to top, var(--teal), var(--teal-light)); }
-  .bar-label { font-size: 0.7rem; color: var(--text-light); font-weight: 500; margin-top: 6px; }
-  .bar-val { font-size: 0.8rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
-
-  /* Donut chart SVG */
-  .donut-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-  .donut-legend { display: flex; flex-direction: column; gap: 6px; width: 100%; margin-top: 8px; }
-  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: var(--text-mid); }
+  .bar-val { font-size: 0.85rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .bar { border-radius: 4px 4px 0 0; width: 100%; }
+  .bar-before { background: #e0e0e0; }
+  .bar-after { background: var(--teal); }
+  .bar-label { font-size: 0.72rem; color: var(--text-light); margin-top: 6px; }
+  .donut-legend { margin-top: 10px; text-align: left; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--text-mid); margin-bottom: 6px; }
   .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-
   @media (max-width: 768px) { .charts-grid { grid-template-columns: 1fr; } }
 
-  /* ── FAQ ── */
-  .faq-list { max-width: 800px; }
-  .faq-item {
-    border: 1px solid var(--border); border-radius: 8px;
-    margin-bottom: 12px; overflow: hidden;
-    background: var(--warm-white);
-  }
-  .faq-q {
-    width: 100%; text-align: left; background: none; border: none;
-    padding: 20px 24px; cursor: pointer;
-    display: flex; justify-content: space-between; align-items: center;
-    gap: 16px;
-    font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;
-    font-weight: 600; color: var(--navy);
-  }
-  .faq-q:hover { color: var(--teal); }
-  .faq-icon { font-size: 1.2rem; transition: transform 0.25s; flex-shrink: 0; color: var(--teal); }
-  .faq-item.open .faq-icon { transform: rotate(45deg); }
-  .faq-a {
-    max-height: 0; overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s;
-    padding: 0 24px;
-  }
-  .faq-item.open .faq-a { max-height: 500px; padding: 0 24px 20px; }
-  .faq-a p { font-size: 0.95rem; color: var(--text-mid); margin: 0; }
-
-  /* ── PROCESS STEPS ── */
+  /* ── STEPS ── */
   .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
   .step-card {
-    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 10px; padding: 28px 22px; text-align: center;
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px; padding: 28px 22px;
   }
   .step-num {
-    width: 48px; height: 48px; border-radius: 50%;
-    background: var(--gold); color: var(--navy);
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--teal); color: #fff;
     display: flex; align-items: center; justify-content: center;
-    font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700;
-    margin: 0 auto 16px;
+    font-weight: 700; font-size: 1.1rem; margin-bottom: 16px;
   }
-  .step-card h3 { color: #fff; font-size: 1.1rem; margin-bottom: 10px; }
-  .step-card p { color: rgba(255,255,255,0.65); font-size: 0.88rem; }
-
-  @media (max-width: 768px) { .steps-grid { grid-template-columns: repeat(2, 1fr); } }
+  .step-card h3 { color: #fff; font-size: 1.2rem; margin-bottom: 10px; }
+  .step-card p { color: rgba(255,255,255,0.68); font-size: 0.9rem; margin: 0; }
+  @media (max-width: 768px) { .steps-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 480px) { .steps-grid { grid-template-columns: 1fr; } }
 
   /* ── TESTIMONIALS ── */
   .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .testimonial-card {
-    background: var(--cream); border: 1px solid var(--border);
-    border-radius: 10px; padding: 28px 24px;
-    display: flex; flex-direction: column;
+    background: var(--warm-white); border: 1px solid var(--border);
+    border-radius: 10px; padding: 26px 22px;
+    box-shadow: var(--shadow);
   }
-  .stars { color: var(--gold); font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
-  .testimonial-card p { font-size: 0.92rem; color: var(--text-mid); font-style: italic; margin-bottom: 16px; flex: 1; }
-  .testimonial-author { font-weight: 600; font-size: 0.85rem; color: var(--navy); }
-  .testimonial-sub { font-size: 0.75rem; color: var(--text-light); margin-top: 3px; }
-
+  .stars { color: #f5a623; font-size: 1rem; margin-bottom: 12px; letter-spacing: 2px; }
+  .testimonial-card p { font-size: 0.9rem; font-style: italic; color: var(--text-mid); }
+  .testimonial-author { font-weight: 700; font-size: 0.92rem; color: var(--navy); margin-top: 14px; }
+  .testimonial-sub { font-size: 0.75rem; color: var(--text-light); margin-top: 2px; }
   @media (max-width: 768px) { .testimonials-grid { grid-template-columns: 1fr; } }
   @media (min-width: 480px) and (max-width: 768px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ── FAQ ── */
+  .faq-list { max-width: 800px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q {
+    width: 100%; background: none; border: none; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 0; font-family: 'DM Sans', sans-serif;
+    font-size: 1rem; font-weight: 600; color: var(--navy);
+    text-align: left; gap: 16px;
+  }
+  .faq-q:hover { color: var(--teal); }
+  .faq-icon {
+    font-size: 1.4rem; font-weight: 300; color: var(--teal);
+    flex-shrink: 0; transition: transform 0.25s;
+    line-height: 1;
+  }
+  .faq-a {
+    display: none; padding-bottom: 20px;
+  }
+  .faq-a p { font-size: 0.95rem; margin: 0; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-item.open .faq-a { display: block; }
 
   /* ── CTA SECTION ── */
   .cta-section {
     background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%);
     padding: 80px 0; text-align: center;
   }
-  .cta-section h2 { color: #fff; margin-bottom: 16px; }
-  .cta-section p { color: rgba(255,255,255,0.78); font-size: 1.05rem; margin-bottom: 32px; }
+  .cta-section h2 { color: #fff; margin-bottom: 14px; }
+  .cta-section p { color: rgba(255,255,255,0.78); max-width: 560px; margin: 0 auto 32px; }
   .cta-phone {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem; font-weight: 700; color: var(--gold-light);
-    display: block; margin-bottom: 20px;
+    display: inline-block; font-size: 2rem; font-weight: 700; color: var(--gold-light);
+    font-family: 'Cormorant Garamond', serif; margin-bottom: 28px; letter-spacing: 0.03em;
   }
+  .cta-phone:hover { color: #fff; }
+
+  /* ── CONTACT SECTION ── */
+  .contact-section { padding: 80px 0; background: var(--cream); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .contact-info h3 { margin-bottom: 20px; }
+  .contact-detail-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+  .contact-detail-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+  .contact-detail-row p { margin: 0; font-size: 0.95rem; }
+  .contact-detail-row strong { display: block; color: var(--navy); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
+  .map-embed { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+  @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
 
   /* ── FOOTER ── */
   footer {
-    background: var(--text-dark); color: rgba(255,255,255,0.65);
-    padding: 48px 0 24px;
+    background: var(--navy); color: rgba(255,255,255,0.72);
+    padding: 60px 0 0;
   }
   .footer-grid {
     max-width: 1140px; margin: 0 auto; padding: 0 24px;
     display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
     margin-bottom: 40px;
   }
-  .footer-brand { }
-  .footer-logo-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 8px;
-  }
+  .footer-logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
   .footer-logo-tag { font-size: 0.75rem; color: var(--teal-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
   .footer-col h4 { color: #fff; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }
   .footer-col ul { list-style: none; }
   .footer-col ul li { margin-bottom: 8px; font-size: 0.88rem; color: rgba(255,255,255,0.72); }
+  .footer-col ul li a { color: rgba(255,255,255,0.72); transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--teal-light); }
   .footer-bottom {
-    max-width: 1140px; margin: 0 auto; padding: 20px 24px 0;
+    max-width: 1140px; margin: 0 auto; padding: 20px 24px;
     border-top: 1px solid rgba(255,255,255,0.08);
     display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
     font-size: 0.78rem;
   }
   .contact-detail { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 0.88rem; }
-
   @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } }
 
   /* ── ANIMATIONS ── */
@@ -459,33 +442,42 @@
   .hero .hero-stats { animation: fadeUp 0.7s 0.35s ease both; }
   .hero-form-card { animation: fadeUp 0.7s 0.1s ease both; }
 
-  /* Scroll reveal utility */
   .reveal {
     opacity: 0; transform: translateY(24px);
     transition: opacity 0.55s ease, transform 0.55s ease;
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* Phone link style */
   a[href^="tel"] { color: inherit; }
-  .btn-header a[href^="tel"],
   a.btn-header[href^="tel"] { color: #ffffff !important; }
+
+  /* ── TWO-COL SEO ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* ── AREAS SERVED PILLS ── */
+  .areas-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .area-pill {
+    background: var(--cream); border: 1px solid var(--border);
+    padding: 6px 14px; border-radius: 20px;
+    font-size: 0.82rem; color: var(--text-mid); font-weight: 500;
+  }
 </style>
 
-<!-- JSON-LD Schema -->
+<!-- JSON-LD Schema — Updated with correct email -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "Dentist"],
+      "@type": ["LocalBusiness", "MedicalBusiness"],
       "@id": "https://www.brightonorthodontist.com/#business",
       "name": "Rex Johnson Orthodontics",
-      "alternateName": "Brighton Orthodontist",
+      "alternateName": ["Brighton Orthodontist", "Rex A. Johnson DDS PC"],
       "url": "https://www.brightonorthodontist.com/",
       "telephone": "+13036592142",
-      "email": "info@rexjohnsonortho.com",
-      "description": "Rex Johnson Orthodontics provides comprehensive orthodontic care for children, teens, and adults in Brighton, Colorado. Services include traditional braces, clear ceramic braces, and Invisalign aligners.",
+      "email": "rjorthodontics@yahoo.com",
+      "description": "Rex Johnson Orthodontics provides comprehensive orthodontic care for children, teens, and adults in Brighton, Colorado. Services include traditional braces, clear ceramic braces, and Invisalign clear aligners. Dr. Rex Johnson is Brighton's hometown orthodontist.",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -506,6 +498,9 @@
         {"@type": "City", "name": "Thornton"},
         {"@type": "City", "name": "Fort Lupton"},
         {"@type": "City", "name": "Henderson"},
+        {"@type": "City", "name": "Lochbuie"},
+        {"@type": "City", "name": "Keenesburg"},
+        {"@type": "AdministrativeArea", "name": "Adams County"},
         {"@type": "State", "name": "Colorado"}
       ],
       "medicalSpecialty": "Orthodontics",
@@ -516,8 +511,10 @@
           {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Traditional Metal Braces"}},
           {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Clear Ceramic Braces"}},
           {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Invisalign Clear Aligners"}},
-          {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Orthodontic Retainers"}},
-          {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Family Orthodontics"}}
+          {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Children's Early Orthodontic Evaluation"}},
+          {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Teen Orthodontics"}},
+          {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Adult Orthodontics"}},
+          {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Orthodontic Retainers"}}
         ]
       }
     },
@@ -556,7 +553,7 @@
       ],
       "hasCredential": [
         {"@type": "EducationalOccupationalCredential", "credentialCategory": "Doctorate in Dentistry"},
-        {"@type": "EducationalOccupationalCredential", "credentialCategory": "Orthodontic Residency"}
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "Orthodontic Specialty Residency"}
       ]
     },
     {
@@ -565,97 +562,87 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Will I have to change what I eat when wearing braces in Brighton, CO?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — patients wearing braces should avoid foods that could damage brackets or become trapped in wires. Common foods to avoid include raw vegetables, hard candy, caramel, taffy, and ice cubes. Your Brighton orthodontist will provide a complete food list at your first appointment. The good news: ice cream is absolutely fine!"
-          }
+          "name": "What is the best age to see an orthodontist in Brighton, CO?",
+          "acceptedAnswer": {"@type": "Answer", "text": "The American Association of Orthodontists recommends a first orthodontic evaluation by age seven. Early assessment allows Dr. Johnson to identify developing problems and guide jaw growth while it is most responsive. This does not always mean immediate braces — it means having the right information at the right time."}
         },
         {
           "@type": "Question",
-          "name": "Can I play sports or a musical instrument while wearing braces?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Sports participation is encouraged — we simply recommend a mouthguard regardless of whether you wear braces. Musicians can also continue playing their instruments. There may be a brief adjustment period after getting braces, but most patients adapt quickly with no lasting impact on their performance."
-          }
+          "name": "Does Rex Johnson Orthodontics offer free consultations?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Consultations at Rex Johnson Orthodontics are always complimentary. There is no cost or obligation to find out which orthodontic options are right for you or your child. Call (303) 659-2142 or submit the online form to schedule."}
         },
         {
           "@type": "Question",
-          "name": "Do I still need to visit my regular dentist during orthodontic treatment?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely — routine dental visits are more important than ever during orthodontic treatment. Braces create additional surfaces where plaque can accumulate, increasing cavity risk. Your general dentist will handle cleanings and exams while Dr. Johnson focuses on moving your teeth into proper alignment. Both providers work together for your best outcome."
-          }
+          "name": "How long does orthodontic treatment take in Brighton, CO?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Treatment length varies depending on the complexity of your case and the treatment type. Most patients complete active orthodontic treatment in 12 to 24 months. Dr. Johnson will give you a personalized estimate after your free consultation."}
         },
         {
           "@type": "Question",
-          "name": "Will I need to wear a retainer after my braces come off?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In nearly all cases, yes. Teeth naturally want to drift back toward their original positions — a condition called orthodontic relapse. Wearing your retainer as directed preserves the alignment achieved through treatment. Dr. Johnson will prescribe the retainer type and wear schedule best suited to your case."
-          }
+          "name": "Is Invisalign available in Brighton, Colorado?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Dr. Rex Johnson is a certified Invisalign provider serving Brighton, Colorado and the surrounding Adams County area. Invisalign uses clear, removable aligners and is a popular choice for teens and adults seeking a discreet orthodontic option."}
         },
         {
           "@type": "Question",
-          "name": "How much does orthodontic treatment cost in Brighton, Colorado?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Orthodontic care is a long-term investment in your health, confidence, and quality of life. The cost varies depending on the type of treatment, case complexity, and duration. Rex Johnson Orthodontics offers multiple financing options to make treatment affordable. Unlike many healthcare costs, orthodontic pricing has remained relatively stable over the years."
-          }
+          "name": "How much does orthodontic treatment cost in Brighton, CO?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Costs vary based on treatment type, case complexity, and duration. Rex Johnson Orthodontics offers flexible financing options to make orthodontic care accessible for Brighton-area families. A personalized cost estimate is provided at your free consultation."}
         },
         {
           "@type": "Question",
-          "name": "What orthodontic treatments does Rex Johnson Orthodontics offer in Brighton, CO?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dr. Rex Johnson offers traditional metal braces, clear ceramic braces, and Invisalign clear aligners for teens and adults. The practice uses digital imaging and 3D computer imaging technology to plan precise, efficient treatment. Whether you're a child getting a first evaluation or an adult seeking a straighter smile, Rex Johnson Orthodontics has a solution for you."
-          }
+          "name": "Will I have to watch what I eat with braces?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Some foods can damage brackets or become trapped in wires. Common foods to avoid include raw vegetables, hard candy, caramel, and ice. Dr. Johnson's team provides a complete list at your first appointment."}
         },
         {
           "@type": "Question",
-          "name": "Can adults get orthodontic treatment at Rex Johnson Orthodontics?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — healthy teeth can be moved at any age. Roughly one in five orthodontic patients today is an adult. Invisalign and clear ceramic braces make treatment discreet and comfortable for adult patients. Many adults who would benefit from orthodontic treatment have never explored their options — Dr. Johnson welcomes patients of all ages."
-          }
+          "name": "Can adults get braces or Invisalign in Brighton, Colorado?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. Healthy teeth can be moved at any age. Approximately one in five orthodontic patients in the U.S. is an adult. Rex Johnson Orthodontics welcomes adult patients and offers braces, clear ceramic braces, and Invisalign."}
         },
         {
           "@type": "Question",
-          "name": "Does properly aligned teeth really improve health beyond appearance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Properly aligned teeth are easier to brush and floss, reducing the risk of decay and gum disease. Misalignment can also contribute to jaw strain, TMJ discomfort, and tension headaches. Correcting bite issues often improves chewing efficiency and can reduce worn enamel. The health benefits extend well beyond cosmetic improvement."
-          }
+          "name": "Do I still need to see my dentist during orthodontic treatment?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes — routine dental visits are more important than ever during orthodontic treatment. Braces create additional surfaces where plaque can accumulate. Your general dentist handles cleanings and exams while Dr. Johnson focuses on tooth movement."}
+        },
+        {
+          "@type": "Question",
+          "name": "Will I need a retainer after my braces come off?",
+          "acceptedAnswer": {"@type": "Answer", "text": "In nearly all cases, yes. Teeth naturally want to drift back toward their original positions after treatment ends. Wearing your retainer as directed is what preserves your results for life. Dr. Johnson prescribes the retainer type and wear schedule best suited to your case."}
+        },
+        {
+          "@type": "Question",
+          "name": "What areas near Brighton, CO does Rex Johnson Orthodontics serve?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Rex Johnson Orthodontics is located at 481 S. 8th Ave. in Brighton and serves patients from Brighton, Commerce City, Thornton, Fort Lupton, Henderson, Lochbuie, Keenesburg, and surrounding Adams County communities."}
         }
       ]
     }
   ]
 }
 </script>
-
 </head>
+
 <body>
 
 <!-- ── HEADER ── -->
 <header>
   <div class="header-inner">
-    <div class="logo-block">
+    <a href="/" class="logo-block">
       <span class="logo-name">Rex Johnson Orthodontics</span>
       <span class="logo-tagline">Brighton, Colorado's Family Orthodontist</span>
-    </div>
+    </a>
     <nav>
+      <a href="/about/">About Dr. Johnson</a>
+      <a href="/areas-of-service/">Areas We Serve</a>
       <a href="#services">Services</a>
-      <a href="#about">Dr. Johnson</a>
+      <a href="/smile-games/">Smile Games</a>
       <a href="#faq">FAQ</a>
-      <a href="tel:3036592142" class="btn-header">📞 (303) 659-2142</a>
+      <a href="#contact" class="btn-header">Free Consultation</a>
     </nav>
-    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </div>
   </div>
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="/about/">About Dr. Johnson</a>
+    <a href="/areas-of-service/">Areas We Serve</a>
     <a href="#services">Services</a>
-    <a href="#about">Meet Dr. Johnson</a>
+    <a href="/smile-games/">Smile Games</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Request Appointment</a>
     <a href="tel:3036592142" class="btn-header">📞 (303) 659-2142</a>
@@ -663,7 +650,7 @@
 </header>
 
 <!-- ── HERO ── -->
-<section class="hero">
+<section class="hero" aria-label="Hero">
   <div class="hero-deco hero-deco-1"></div>
   <div class="hero-deco hero-deco-2"></div>
   <div class="hero-inner">
@@ -685,34 +672,37 @@
           <div class="hero-stat-label">Ages Welcome</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">1</div>
-          <div class="hero-stat-label">Hometown Practice</div>
+          <div class="hero-stat-num">Free</div>
+          <div class="hero-stat-label">Consultations</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">★★★★★</div>
+          <div class="hero-stat-label">Google Reviews</div>
         </div>
       </div>
     </div>
 
-    <!-- Contact Form -->
+    <!-- Contact Form — routes to rjorthodontics@yahoo.com -->
     <div class="hero-form-card" id="contact">
       <h3>Request Your Free Consultation</h3>
       <p>We'll contact you within one business day to confirm your appointment.</p>
-      <form action="https://formsubmit.co/info@rexjohnsonortho.com" method="POST">
-        <!-- FormSubmit config -->
+      <form action="https://formsubmit.co/rjorthodontics@yahoo.com" method="POST">
         <input type="hidden" name="_subject" value="New Consultation Request — BrightonOrthodontist.com">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://www.brightonorthodontist.com/?submitted=true">
-        <input type="text" name="_honey" style="display:none">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
         <div class="form-group">
           <label for="name">Full Name *</label>
-          <input type="text" id="name" name="name" placeholder="Your full name" required>
+          <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name">
         </div>
         <div class="form-group">
           <label for="phone">Phone Number *</label>
-          <input type="tel" id="phone" name="phone" placeholder="(303) 000-0000" required>
+          <input type="tel" id="phone" name="phone" placeholder="(303) 000-0000" required autocomplete="tel">
         </div>
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com">
+          <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email">
         </div>
         <div class="form-group">
           <label for="patient_age">Patient Age Range</label>
@@ -741,26 +731,23 @@
 </section>
 
 <!-- ── TRUST BAR ── -->
-<div class="trust-bar">
+<div class="trust-bar" aria-label="Credentials">
   <div class="trust-bar-inner">
     <div class="trust-item"><span class="trust-icon">🎓</span> University of Nebraska — Doctorate in Dentistry</div>
     <div class="trust-item"><span class="trust-icon">🏥</span> Orthodontic Residency — University of Minnesota</div>
     <div class="trust-item"><span class="trust-icon">📍</span> 481 S. 8th Ave., Brighton, CO 80601</div>
-    <div class="trust-item"><span class="trust-icon">📞</span> <a href="tel:3036592142">(303) 659-2142</a></div>
+    <div class="trust-item"><span class="trust-icon">📞</span> <a href="tel:3036592142" style="color:rgba(255,255,255,0.82);">(303) 659-2142</a></div>
   </div>
 </div>
 
 <!-- ── WHY ORTHODONTICS ── -->
-<section class="section">
+<section class="section" aria-labelledby="why-heading">
   <div class="container">
     <div class="section-label">Why It Matters</div>
-    <h2 class="section-title">Brighton Orthodontics: More Than a Straighter Smile</h2>
+    <h2 id="why-heading" class="section-title">Brighton Orthodontics: More Than a Straighter Smile</h2>
     <p class="section-intro">Orthodontic treatment from a trusted Brighton, CO orthodontist is one of the most impactful investments you can make in your long-term health. Properly aligned teeth do far more than look great — they function better, stay cleaner, and protect your overall wellness for decades to come.</p>
 
-    <!-- Charts -->
     <div class="charts-grid reveal">
-
-      <!-- Chart 1: Confidence -->
       <div class="chart-card">
         <h4>📈 Self-Confidence After Orthodontic Treatment</h4>
         <div class="bar-chart">
@@ -781,17 +768,12 @@
         </div>
         <p style="font-size:0.78rem;color:var(--text-light);margin:12px 0 0;">% of patients reporting high smile confidence<br><em>Source: American Association of Orthodontists</em></p>
       </div>
-
-      <!-- Chart 2: Oral Health -->
       <div class="chart-card">
-        <h4>🦷 Oral Health Outcomes — Straight vs. Misaligned Teeth</h4>
-        <svg viewBox="0 0 160 140" width="160" height="140" style="display:block;margin:0 auto 8px;">
-          <!-- Cavities risk donut -->
+        <h4>🦷 Oral Health — Straight vs. Misaligned Teeth</h4>
+        <svg viewBox="0 0 160 140" width="160" height="140" style="display:block;margin:0 auto 8px;" aria-hidden="true">
           <circle cx="80" cy="70" r="54" fill="none" stroke="#e0e0e0" stroke-width="22"/>
-          <!-- Straight teeth: low risk — teal arc 75% -->
           <circle cx="80" cy="70" r="54" fill="none" stroke="#1a8fa0" stroke-width="22"
             stroke-dasharray="254 340" stroke-dashoffset="85" stroke-linecap="round"/>
-          <!-- Center label -->
           <text x="80" y="65" text-anchor="middle" font-size="15" font-weight="700" fill="#0d2b45" font-family="Cormorant Garamond, serif">75%</text>
           <text x="80" y="83" text-anchor="middle" font-size="9" fill="#6b7a8d" font-family="DM Sans, sans-serif">lower cavity</text>
           <text x="80" y="94" text-anchor="middle" font-size="9" fill="#6b7a8d" font-family="DM Sans, sans-serif">risk</text>
@@ -801,8 +783,6 @@
           <div class="legend-item"><div class="legend-dot" style="background:#e0e0e0"></div> Crooked teeth — harder to clean effectively</div>
         </div>
       </div>
-
-      <!-- Chart 3: Headaches / TMJ -->
       <div class="chart-card">
         <h4>💆 Bite Correction & Tension Headache Relief</h4>
         <div class="bar-chart">
@@ -821,64 +801,69 @@
             <div class="bar-label">After Tx</div>
           </div>
         </div>
-        <p style="font-size:0.78rem;color:var(--text-light);margin:12px 0 0;">% reporting frequent tension headaches in patients with bite problems<br><em>Source: J. Clinical Orthodontics</em></p>
+        <p style="font-size:0.78rem;color:var(--text-light);margin:12px 0 0;">% reporting frequent tension headaches in patients with bite issues<br><em>Source: J. Clinical Orthodontics</em></p>
       </div>
-
     </div>
 
     <div style="margin-top:36px;" class="reveal">
-      <p style="max-width:760px;font-size:1rem;">Research consistently shows that misaligned teeth contribute to uneven enamel wear, difficulty flossing, elevated gum disease risk, jaw strain, and even chronic tension headaches caused by an unbalanced bite. When you invest in orthodontics in Brighton, CO, you're investing in decades of better oral health — not just aesthetics.</p>
+      <p style="max-width:760px;font-size:1rem;">Research consistently shows that misaligned teeth contribute to uneven enamel wear, difficulty flossing, elevated gum disease risk, jaw strain, and chronic tension headaches caused by an unbalanced bite. When you invest in orthodontics in Brighton, CO, you're investing in decades of better oral health — not just aesthetics.</p>
     </div>
   </div>
 </section>
 
 <!-- ── SERVICES ── -->
-<section class="section section-alt" id="services">
+<section class="section section-alt" id="services" aria-labelledby="services-heading">
   <div class="container">
     <div class="section-label">Treatment Options</div>
-    <h2 class="section-title">Brighton Orthodontic Services for Every Age & Lifestyle</h2>
+    <h2 id="services-heading" class="section-title">Brighton Orthodontic Services for Every Age &amp; Lifestyle</h2>
     <p class="section-intro">Dr. Johnson offers multiple orthodontic solutions so your treatment fits your life — whether you're a seven-year-old, a busy teen athlete, or an adult professional looking for a discreet option.</p>
 
     <div class="services-grid reveal">
       <div class="service-card">
         <div class="service-icon">🔩</div>
         <h3>Traditional Metal Braces</h3>
-        <p>The gold standard of orthodontics — and more comfortable than ever. Modern metal brackets are smaller, lighter, and more efficient than those from even ten years ago. Traditional braces are ideal for complex cases and are the most cost-effective option available from your Brighton orthodontist.</p>
+        <p>The gold standard of orthodontics — and more comfortable than ever. Modern brackets are smaller, lighter, and more efficient. Ideal for complex cases and the most cost-effective option your Brighton orthodontist offers.</p>
+        <a href="/areas-of-service/" class="service-link">Learn more →</a>
       </div>
       <div class="service-card">
         <div class="service-icon">💎</div>
         <h3>Clear Ceramic Braces</h3>
-        <p>Same precise tooth movement as metal braces, but with tooth-colored ceramic brackets that blend in with your smile. A popular choice for teens and adults who want effective treatment with a lower profile appearance. Ask Dr. Johnson if clear ceramic braces are right for your case.</p>
+        <p>Same precise movement as metal braces, but with tooth-colored ceramic brackets that blend in with your smile. Popular with image-conscious teens and adults throughout Brighton, CO.</p>
+        <a href="/areas-of-service/" class="service-link">Learn more →</a>
       </div>
       <div class="service-card">
         <div class="service-icon">✨</div>
         <h3>Invisalign® Clear Aligners</h3>
-        <p>Invisalign uses a series of custom-made, removable clear trays to gradually reposition your teeth — no brackets, no wires. Virtually invisible and easy to maintain, Invisalign is popular with teens and adults in Brighton who want to straighten their teeth without interrupting daily life.</p>
+        <p>Custom clear trays that gradually reposition teeth — no brackets, no wires. Virtually invisible, removable, and easy to maintain. Dr. Johnson is a certified Invisalign provider in Brighton, Colorado.</p>
+        <a href="/areas-of-service/" class="service-link">Learn more →</a>
       </div>
       <div class="service-card">
         <div class="service-icon">👶</div>
         <h3>Children's Early Orthodontics</h3>
-        <p>The American Association of Orthodontists recommends a first orthodontic evaluation by age seven. Early treatment, sometimes called Phase 1, can guide jaw development, create space for permanent teeth, and reduce the complexity and cost of later treatment.</p>
+        <p>The AAO recommends a first eval by age seven. Early treatment can guide jaw development, create space for permanent teeth, and reduce the complexity and cost of treatment later.</p>
+        <a href="/areas-of-service/" class="service-link">Learn more →</a>
       </div>
       <div class="service-card">
         <div class="service-icon">🧑</div>
         <h3>Teen Orthodontics</h3>
-        <p>Teen patients are in the most common treatment window for orthodontics. Dr. Johnson offers braces and Invisalign Teen, both designed to work with active teen lifestyles — including sports, music, and school activities. Mouthguard recommendations are included.</p>
+        <p>Braces and Invisalign Teen — both built around active teen lifestyles including sports, music, and school. Mouthguard recommendations included for contact sports.</p>
+        <a href="/areas-of-service/" class="service-link">Learn more →</a>
       </div>
       <div class="service-card">
         <div class="service-icon">🛡️</div>
-        <h3>Retention & Retainers</h3>
-        <p>Finishing treatment is just the beginning. Your retainer is what preserves your results for a lifetime. Dr. Johnson will prescribe the right retainer — fixed, removable, or a combination — and explain exactly how long and how often to wear it to protect your investment.</p>
+        <h3>Retention &amp; Retainers</h3>
+        <p>Finishing treatment is just the beginning. Your retainer preserves your results for life. Dr. Johnson will prescribe the right type — fixed, removable, or a combination — and a clear wear schedule.</p>
+        <a href="/areas-of-service/" class="service-link">Learn more →</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ── DR. JOHNSON / ABOUT ── -->
-<section class="section" id="about">
+<section class="section" id="about" aria-labelledby="about-heading">
   <div class="container">
     <div class="about-grid">
-      <div class="about-portrait reveal">
+      <div class="about-portrait reveal" role="img" aria-label="Dr. Rex Johnson, Orthodontist in Brighton, CO">
         <div class="about-portrait-badge">
           <strong>Dr. Rex Johnson, DDS</strong>
           <span>Brighton, Colorado Orthodontist</span>
@@ -886,10 +871,9 @@
       </div>
       <div class="reveal">
         <div class="section-label">Meet Your Doctor</div>
-        <h2>Dr. Rex Johnson — Experienced, Caring, Brighton's Own</h2>
-        <p style="margin-top:16px;">Dr. Rex Johnson has built Rex Johnson Orthodontics on a single premise: every patient deserves the same personalized, attentive care he would want for his own family. In a world of corporate dental chains and franchise orthodontic practices, Rex Johnson Orthodontics remains a true hometown practice — where staff know your name, remember your case, and genuinely celebrate your results.</p>
-        <p>Dr. Johnson completed his doctoral degree in dentistry at the <strong>University of Nebraska</strong> and went on to earn his orthodontic specialty certification through a rigorous residency program at the <strong>University of Minnesota</strong> — one of the nation's most respected orthodontic programs. He remains committed to continuing education, regularly attending advanced training to stay current with the latest techniques and technology in the orthodontic field.</p>
-
+        <h2 id="about-heading">Dr. Rex Johnson — Experienced, Caring, Brighton's Own</h2>
+        <p style="margin-top:16px;">Dr. Rex Johnson has built Rex Johnson Orthodontics on a single premise: every patient deserves the same personalized, attentive care he would want for his own family. In a world of corporate dental chains, Rex Johnson Orthodontics remains a true hometown practice — where staff know your name, remember your case, and genuinely celebrate your results.</p>
+        <p>Dr. Johnson completed his doctoral degree in dentistry at the <strong>University of Nebraska</strong> and earned his orthodontic specialty certification through a rigorous residency at the <strong>University of Minnesota</strong> — one of the nation's most respected orthodontic programs. He remains committed to continuing education, staying current with the latest techniques and technology.</p>
         <div class="credential-list">
           <div class="credential-item">
             <span class="credential-check">✓</span>
@@ -897,92 +881,113 @@
           </div>
           <div class="credential-item">
             <span class="credential-check">✓</span>
-            <p><strong>Orthodontic Residency</strong> — University of Minnesota</p>
+            <p><strong>Orthodontic Specialty Residency</strong> — University of Minnesota</p>
           </div>
           <div class="credential-item">
             <span class="credential-check">✓</span>
-            <p><strong>Digital & 3D Computer Imaging</strong> — Advanced diagnostic technology for precise treatment planning</p>
+            <p><strong>Digital &amp; 3D Computer Imaging</strong> — Advanced diagnostic technology for precise treatment planning</p>
           </div>
           <div class="credential-item">
             <span class="credential-check">✓</span>
-            <p><strong>Invisalign Provider</strong> — Certified to treat teens and adults with clear aligner therapy</p>
+            <p><strong>Certified Invisalign Provider</strong> — Treating teens and adults with clear aligner therapy</p>
           </div>
           <div class="credential-item">
             <span class="credential-check">✓</span>
             <p><strong>Ongoing Continuing Education</strong> — Stays current with evolving orthodontic best practices</p>
           </div>
         </div>
-        <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:8px;">Schedule a Consultation with Dr. Johnson</a>
+        <a href="/about/" class="btn-primary" style="display:inline-block;margin-top:8px;">Learn More About Dr. Johnson</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ── PROCESS STEPS ── -->
-<section class="section section-dark">
+<section class="section section-dark" aria-labelledby="process-heading">
   <div class="container">
     <div class="section-label" style="color:var(--teal-light)">Your Journey</div>
-    <h2 style="color:#fff;margin-bottom:12px;">What to Expect at Rex Johnson Orthodontics</h2>
+    <h2 id="process-heading" style="color:#fff;margin-bottom:12px;">What to Expect at Rex Johnson Orthodontics</h2>
     <p style="color:rgba(255,255,255,0.65);max-width:580px;margin-bottom:48px;">Getting started is simple. Our Brighton orthodontic team guides you through every step from your first call to your final retainer fitting.</p>
 
     <div class="steps-grid reveal">
       <div class="step-card">
         <div class="step-num">1</div>
         <h3>Free Consultation</h3>
-        <p>We evaluate your bite, alignment, and jaw development — and discuss which treatment options are the best fit for your goals and budget.</p>
+        <p>We evaluate your bite, alignment, and jaw development — and discuss which treatment options best fit your goals and budget. No cost, no obligation.</p>
       </div>
       <div class="step-card">
         <div class="step-num">2</div>
         <h3>Custom Treatment Plan</h3>
-        <p>Using digital imaging and 3D technology, Dr. Johnson creates a precise, personalized plan. You'll see a roadmap before treatment ever begins.</p>
+        <p>Using digital imaging and 3D technology, Dr. Johnson creates a precise, personalized plan. You'll see a clear roadmap before treatment begins.</p>
       </div>
       <div class="step-card">
         <div class="step-num">3</div>
         <h3>Active Treatment</h3>
-        <p>Whether braces or Invisalign, Dr. Johnson and his team monitor your progress at every visit, making adjustments to keep your case on track.</p>
+        <p>Whether braces or Invisalign, Dr. Johnson personally monitors your progress at every visit — making adjustments to keep your case on track.</p>
       </div>
       <div class="step-card">
         <div class="step-num">4</div>
-        <h3>Retention & Results</h3>
+        <h3>Retention &amp; Results</h3>
         <p>When treatment completes, we fit you with a retainer and build a long-term plan to preserve your new smile for a lifetime.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── SEO COPY SECTION ── -->
-<section class="section section-alt">
+<!-- ── SEO / COMMUNITY COPY SECTION ── -->
+<section class="section section-alt" aria-labelledby="community-heading">
   <div class="container">
-    <div class="section-label">Serving Brighton, CO & Surrounding Communities</div>
-    <h2 class="section-title">Why Families Choose Rex Johnson Orthodontics as Their Brighton Orthodontist</h2>
+    <div class="section-label">Serving Brighton, CO &amp; Surrounding Communities</div>
+    <h2 id="community-heading" class="section-title">Why Brighton Families Choose Rex Johnson Orthodontics</h2>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="reveal">
+    <div class="two-col reveal">
       <div>
-        <p>Finding the right orthodontist in Brighton, CO is a decision that affects your family for years. Dr. Rex Johnson has earned the trust of Brighton-area families through consistent clinical results, genuine patient relationships, and a commitment to keeping orthodontic care accessible and affordable.</p>
-        <p>Unlike large orthodontic chains where you may see a different provider at each appointment, Rex Johnson Orthodontics maintains continuity of care. Dr. Johnson personally manages your case from your first consultation through your final retention visit. His staff builds relationships with patients and families — because in a community like Brighton, that matters.</p>
+        <p>Finding the right orthodontist in Brighton, Colorado is a decision that affects your family for years. Dr. Rex Johnson has earned the trust of Brighton-area families through consistent clinical results, genuine patient relationships, and a commitment to keeping orthodontic care accessible and affordable.</p>
+        <p>Unlike large orthodontic chains where you may see a different provider at each appointment, Rex Johnson Orthodontics maintains complete continuity of care. Dr. Johnson personally manages every case from the first consultation through the final retention visit. His team builds relationships with patients and families — because in a community like Brighton, that matters.</p>
         <h3 style="margin:24px 0 12px;">Advanced Technology. Personal Touch.</h3>
-        <p>Orthodontics in Brighton, CO has evolved dramatically. Rex Johnson Orthodontics stays at the front of that evolution — incorporating digital records, digital imaging, and 3D computer imaging to enhance diagnostic accuracy and treatment efficiency. This technology means shorter treatment times, fewer surprises, and better outcomes for our Brighton orthodontic patients.</p>
-        <p>Invisalign has changed the game for adult patients and image-conscious teens throughout the Brighton, CO area. These clear, removable aligners let patients eat without restriction, brush and floss normally, and go about daily life without the visibility of traditional braces. Dr. Johnson evaluates every patient to determine whether Invisalign or conventional braces will produce the best result for their specific case.</p>
+        <p>Rex Johnson Orthodontics stays current with digital records, digital imaging, and 3D computer imaging — delivering better diagnostic accuracy, shorter treatment times, and fewer surprises. Invisalign has changed the game for adult patients and image-conscious teens throughout the Brighton, CO area. Dr. Johnson evaluates every patient to determine whether Invisalign or conventional braces will produce the best long-term result.</p>
+
+        <h3 style="margin:24px 0 12px;">Areas We Serve</h3>
+        <p>Located at 481 S. 8th Ave. in Brighton, we see patients from across Adams County and the northern Denver metro:</p>
+        <div class="areas-pills">
+          <a href="/areas-of-service/" class="area-pill">Brighton, CO</a>
+          <a href="/areas-of-service/" class="area-pill">Commerce City</a>
+          <a href="/areas-of-service/" class="area-pill">Thornton</a>
+          <a href="/areas-of-service/" class="area-pill">Fort Lupton</a>
+          <a href="/areas-of-service/" class="area-pill">Henderson</a>
+          <a href="/areas-of-service/" class="area-pill">Lochbuie</a>
+          <a href="/areas-of-service/" class="area-pill">Keenesburg</a>
+          <a href="/areas-of-service/" class="area-pill">Adams County</a>
+        </div>
       </div>
       <div>
         <h3 style="margin:0 0 12px;">Brighton Orthodontics for the Entire Family</h3>
-        <p>Rex Johnson Orthodontics is a true family practice. We welcome patients of all ages — from young children receiving early orthodontic evaluations to adults in their 40s, 50s, and beyond discovering that it's never too late to improve their smile. Today, approximately one in five orthodontic patients in the United States is an adult, a number that continues to grow as discreet options like Invisalign become more widely available.</p>
-        <p>If your child has reached age seven, now is a great time to schedule a complimentary orthodontic evaluation. Early assessment allows Dr. Johnson to identify developing problems — crowding, crossbites, protruding teeth — and intervene when the jaw is still growing and most responsive to guidance. Early treatment doesn't always mean early braces; it means having the right information to make smart decisions at the right time.</p>
-        <h3 style="margin:24px 0 12px;">Serving Brighton, Commerce City, Thornton & Fort Lupton</h3>
-        <p>Located at 481 S. 8th Ave. in Brighton, Colorado, Rex Johnson Orthodontics is conveniently accessible to families throughout Adams County and the surrounding region — including Commerce City, Thornton, Henderson, Fort Lupton, Lochbuie, and Keenesburg. If you're searching for an orthodontist near Brighton CO or anywhere in the northern Denver metro area, we welcome you to schedule a consultation and experience the Rex Johnson difference.</p>
-        <a href="tel:3036592142" class="btn-primary" style="display:inline-block;margin-top:16px;">Call (303) 659-2142 to Get Started</a>
+        <p>Rex Johnson Orthodontics is a true family practice. We welcome patients of all ages — from young children receiving early orthodontic evaluations to adults in their 40s, 50s, and beyond discovering it's never too late to improve their smile. Today, approximately one in five orthodontic patients in the U.S. is an adult, a number that continues to grow as discreet options like Invisalign become more widely available.</p>
+        <p>If your child has reached age seven, now is a great time to schedule a complimentary orthodontic evaluation. Early assessment allows Dr. Johnson to identify developing problems — crowding, crossbites, protruding teeth — and intervene while the jaw is still growing and most responsive to guidance. Early treatment doesn't always mean early braces; it means having the right information to make smart decisions at the right time.</p>
+
+        <div style="background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:24px;margin-top:24px;">
+          <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;">Common Questions AI &amp; Search Users Ask</div>
+          <ul style="list-style:none;font-size:0.9rem;color:var(--text-mid);">
+            <li style="padding:6px 0;border-bottom:1px solid var(--border);">🔍 "Best orthodontist in Brighton Colorado"</li>
+            <li style="padding:6px 0;border-bottom:1px solid var(--border);">🔍 "Invisalign provider Brighton CO"</li>
+            <li style="padding:6px 0;border-bottom:1px solid var(--border);">🔍 "Braces for kids Brighton Colorado"</li>
+            <li style="padding:6px 0;border-bottom:1px solid var(--border);">🔍 "Free orthodontic consultation Brighton"</li>
+            <li style="padding:6px 0;">🔍 "Adult braces near Brighton CO"</li>
+          </ul>
+          <a href="#contact" class="btn-primary" style="display:block;text-align:center;margin-top:16px;">Schedule Your Consultation</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ── TESTIMONIALS ── -->
-<section class="section">
+<section class="section" aria-labelledby="reviews-heading">
   <div class="container">
     <div class="section-label">Real Google Reviews</div>
-    <h2 class="section-title" style="margin-bottom:8px;">What Brighton Families Are Saying</h2>
+    <h2 id="reviews-heading" class="section-title" style="margin-bottom:8px;">What Brighton Families Are Saying</h2>
     <p style="margin-bottom:36px;font-size:0.92rem;color:var(--text-light);">
-      ★★★★★ Verified Google Reviews — <a href="https://www.google.com/maps/search/Rex+A.+Johnson+DDS+PC+Brighton+CO" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">Read all reviews on Google</a>
+      ★★★★★ Verified Google Reviews — <a href="https://www.google.com/maps/search/Rex+A.+Johnson+DDS+PC+Brighton+CO" target="_blank" rel="noopener noreferrer" style="color:var(--teal);font-weight:600;">Read all reviews on Google</a>
     </p>
 
     <div class="testimonials-grid reveal">
@@ -990,44 +995,44 @@
         <div class="stars">★★★★★</div>
         <p>"I've had three kids in braces. Two of them went to a place I won't mention. The third one is with Dr. Rex Johnson, and we LOVE him. I am kicking myself for not taking the first two there. Not only is Dr. Rex Johnson much more affordable..."</p>
         <div class="testimonial-author">Stacey Leuch</div>
-        <div class="testimonial-sub">13 Reviews · Google Verified · 1 year ago</div>
+        <div class="testimonial-sub">13 Reviews · Google Verified</div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
         <p>"Dr Johnson and his team have been wonderful through our braces journey so far. We drive 45 minutes to his office and it is worth it. He and his team work with reschedules and working around your schedule as best as they can."</p>
         <div class="testimonial-author">J Carbs</div>
-        <div class="testimonial-sub">Local Guide · 32 Reviews · Google Verified · 1 year ago</div>
+        <div class="testimonial-sub">Local Guide · 32 Reviews · Google Verified</div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
         <p>"Dr. Johnson is HANDS DOWN the best Orthodontic doctor we have ever been to. He is so good with kids and my girls actually look forward to seeing him every time we go. He really cares about his patients not only inside his office, but..."</p>
         <div class="testimonial-author">Jennifer Johnson</div>
-        <div class="testimonial-sub">Local Guide · 19 Reviews · Google Verified · 3 years ago</div>
+        <div class="testimonial-sub">Local Guide · 19 Reviews · Google Verified</div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
         <p>"Dr Johnson just removed braces from our youngest child today. We have loved working with him over the years to make sure our children love their smiles. Just the other day child number 4 said while looking in the mirror, 'My teeth are so...'"</p>
         <div class="testimonial-author">The Gifford's</div>
-        <div class="testimonial-sub">3 Reviews · Google Verified · 6 years ago</div>
+        <div class="testimonial-sub">Google Verified</div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
         <p>"Cannot say enough positives about Dr. Johnson and his entire staff! Thank you for taking time on your day off to help us! Matthew Fisher and his entire family thank you so much!!"</p>
         <div class="testimonial-author">Lisa Esher</div>
-        <div class="testimonial-sub">3 Reviews · Google Verified · 4 years ago</div>
+        <div class="testimonial-sub">Google Verified</div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
         <p>"Absolutely love Dr Johnson — his whole staff is so helpful and really take pride in their work and actually care about their patients."</p>
         <div class="testimonial-author">April Carroll</div>
-        <div class="testimonial-sub">9 Reviews · Google Verified · 4 years ago</div>
+        <div class="testimonial-sub">Google Verified</div>
       </div>
     </div>
 
     <p style="text-align:center;margin-top:32px;">
-      <a href="https://www.google.com/maps/search/Rex+A.+Johnson+DDS+PC+Brighton+CO" target="_blank" rel="noopener"
+      <a href="https://www.google.com/maps/search/Rex+A.+Johnson+DDS+PC+Brighton+CO" target="_blank" rel="noopener noreferrer"
         style="display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--border);padding:12px 24px;border-radius:8px;font-weight:600;font-size:0.9rem;color:var(--navy);box-shadow:var(--shadow);">
-        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
         See All Google Reviews for Rex Johnson Orthodontics
       </a>
     </p>
@@ -1035,91 +1040,111 @@
 </section>
 
 <!-- ── FAQ ── -->
-<section class="section section-alt" id="faq">
+<section class="section section-alt" id="faq" aria-labelledby="faq-heading">
   <div class="container">
     <div class="section-label">Frequently Asked Questions</div>
-    <h2 class="section-title" style="margin-bottom:12px;">Brighton Orthodontics — Your Questions Answered</h2>
+    <h2 id="faq-heading" class="section-title" style="margin-bottom:12px;">Brighton Orthodontics — Your Questions Answered</h2>
     <p class="section-intro">Have questions about orthodontic treatment in Brighton, CO? Here are the most common questions Dr. Johnson hears from patients and families — answered clearly and honestly.</p>
 
     <div class="faq-list reveal">
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          What is the best age to see an orthodontist in Brighton, CO?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" hidden>
+          <p>The American Association of Orthodontists recommends a first orthodontic evaluation by age seven. At this age, Dr. Johnson can identify developing problems — crowding, crossbites, or jaw growth issues — and intervene while the jaw is still growing and most responsive to guidance. Importantly, early evaluation does not always mean immediate braces; it means having the right information to make smart decisions at the right time. Early treatment can reduce the complexity and cost of treatment later.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          Does Rex Johnson Orthodontics offer free consultations?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Yes — consultations at Rex Johnson Orthodontics are always complimentary. There is no cost and no obligation to find out which orthodontic options are right for you or your child. Dr. Johnson will review your bite, alignment, and jaw development, and discuss which treatment options are the best fit for your goals and budget. Call (303) 659-2142 or complete the online form above to get started.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          How long does orthodontic treatment take?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Treatment length varies depending on the complexity of your case and the treatment type chosen. Most patients complete active orthodontic treatment in 12 to 24 months. Simpler cases may be resolved in under a year; more complex bite and alignment issues may take longer. Dr. Johnson will provide a personalized estimated timeline after your initial consultation so you know exactly what to expect from the start.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          Is Invisalign available in Brighton, Colorado?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Yes. Dr. Rex Johnson is a certified Invisalign provider, offering clear aligner treatment to teens and adults throughout Brighton, CO and the surrounding Adams County area. Invisalign uses a series of custom-made, removable clear trays to gradually reposition teeth — with no brackets and no wires. It is virtually invisible, easy to maintain, and allows patients to eat without restriction. Dr. Johnson evaluates every patient to confirm whether Invisalign or conventional braces will deliver the best long-term outcome for their specific case.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          How much does orthodontic treatment cost in Brighton, CO?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Orthodontic costs vary depending on treatment type (braces vs. Invisalign), the complexity of your case, and the estimated duration of treatment. Rex Johnson Orthodontics offers multiple flexible financing options to make care accessible for Brighton-area families. Unlike many healthcare costs, orthodontic pricing has remained relatively stable over the years — and the long-term value of a straighter, healthier smile is substantial. A personalized cost estimate is provided at no charge during your free consultation.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
           Will I have to watch what I eat with braces?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a">
-          <p>Yes — some foods can damage brackets or become trapped in wires, which can slow your progress and create hygiene challenges. Common foods to avoid include raw vegetables (carrots, celery), hard candy, caramel, taffy, popcorn, and chewing on ice cubes. The good news: ice cream is perfectly fine! Dr. Johnson's team will provide a complete list at your first appointment so there's no guessing involved.</p>
+        <div class="faq-a" hidden>
+          <p>Yes — some foods can damage brackets or become trapped in wires, which can slow your progress and create hygiene challenges. Common foods to avoid include raw hard vegetables (carrots, celery), hard candy, caramel, taffy, popcorn, and chewing ice cubes. The good news: ice cream is perfectly fine! Dr. Johnson's team will provide a complete dietary list at your first appointment so there's no guessing involved.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Can I still play sports or a musical instrument while wearing braces?
-          <span class="faq-icon">+</span>
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          Can adults get braces or Invisalign in Brighton, Colorado?
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a">
-          <p>Absolutely. Sports participation is encouraged — we simply recommend wearing an orthodontic mouthguard during contact sports, whether you have braces or not. Musicians can also continue playing their instruments. Most patients experience a brief adjustment period after getting braces, particularly wind instrument players, but the vast majority adapt quickly with no lasting effect on their technique or performance.</p>
+        <div class="faq-a" hidden>
+          <p>Absolutely. Healthy teeth can be moved at any age. Approximately one in five orthodontic patients in the U.S. today is an adult — a number that continues to grow as discreet options like Invisalign and clear ceramic braces become mainstream. Many Brighton-area adults who would benefit from orthodontic treatment simply never explored their options. Dr. Johnson welcomes patients of all ages and will help you find the right path to a healthier, more confident smile regardless of where you are in life.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Do I still need to see my regular dentist during orthodontic treatment?
-          <span class="faq-icon">+</span>
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          Do I still need to see my dentist during orthodontic treatment?
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a">
-          <p>Yes — and it's more important than ever during treatment. Braces create additional areas where plaque can accumulate, increasing the risk of tooth decay and gum irritation if oral hygiene slips. Your general dentist handles cleanings and exams while Dr. Johnson focuses on tooth movement. Both providers work in parallel to protect your overall oral health throughout your orthodontic journey.</p>
+        <div class="faq-a" hidden>
+          <p>Yes — and it's more important than ever during treatment. Braces create additional surfaces where plaque can accumulate, increasing the risk of tooth decay and gum irritation if oral hygiene slips. Your general dentist handles cleanings and exams while Dr. Johnson focuses on tooth movement. Both providers work in parallel to protect your overall oral health throughout your orthodontic journey. We recommend continuing regular six-month dental cleanings throughout treatment.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
           Will I need to wear a retainer after my braces come off?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a">
+        <div class="faq-a" hidden>
           <p>In almost every case, yes. After active orthodontic treatment ends, teeth have a natural tendency to drift back toward their original positions — a process called orthodontic relapse. Wearing your retainer as directed is the key to preserving the results of your treatment for life. Dr. Johnson will prescribe the retainer type and schedule best suited to your specific case, and will explain exactly what to expect during the retention phase.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          How much does orthodontic treatment cost in Brighton, CO?
-          <span class="faq-icon">+</span>
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          What areas near Brighton, CO does Rex Johnson Orthodontics serve?
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a">
-          <p>Orthodontic care is a long-term investment in your health, confidence, and quality of life. Treatment costs vary depending on the type of treatment (braces vs. Invisalign), the complexity of your case, and the duration of treatment. Rex Johnson Orthodontics offers multiple financing options to make care accessible for Brighton-area families. Unlike many healthcare costs, orthodontic pricing has remained relatively stable over the years, and the value — a straighter, healthier smile for decades — speaks for itself. Call our office for a personalized cost estimate after your consultation.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Can adults get orthodontic treatment, or is it just for kids?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <p>Healthy teeth can be moved at any age. Today, approximately one in five orthodontic patients in the U.S. is an adult — a number that continues to grow as discreet options like Invisalign and clear ceramic braces become mainstream. Many Brighton-area adults who would benefit from orthodontic treatment simply never explored their options. Dr. Johnson welcomes patients of all ages and will help you find the right path to a healthier, more confident smile regardless of where you are in life.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Does straight teeth actually improve health beyond just appearance?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <p>Yes — the health benefits of proper alignment extend well beyond aesthetics. Straight teeth are significantly easier to brush and floss effectively, reducing long-term risk of cavities and gum disease. Bite alignment issues can contribute to jaw strain, TMJ discomfort, and chronic tension headaches — all of which frequently improve following orthodontic correction. Properly aligned teeth also experience more even wear, helping to protect enamel over your lifetime. The confidence boost is wonderful; the health benefits are equally real.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          What makes Rex Johnson Orthodontics different from other Brighton orthodontists?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <p>Rex Johnson Orthodontics is a true hometown practice. Dr. Johnson personally oversees every case from consultation through retention — you won't be handed off to different providers or assistants at different visits. The office maintains a warm, family-friendly environment where staff know patients by name. Combined with advanced technology like digital imaging and 3D computer imaging, and a comprehensive range of treatment options, Rex Johnson Orthodontics offers the rare combination of personal care and clinical excellence that Brighton families deserve.</p>
+        <div class="faq-a" hidden>
+          <p>Rex Johnson Orthodontics is located at 481 S. 8th Ave. in Brighton and conveniently serves families throughout Adams County and the surrounding region — including Commerce City, Thornton, Henderson, Fort Lupton, Lochbuie, and Keenesburg. Patients have driven up to 45 minutes specifically to see Dr. Johnson. If you're searching for an orthodontist near Brighton, CO or anywhere in the northern Denver metro area, we warmly invite you to schedule a complimentary consultation.</p>
         </div>
       </div>
 
@@ -1128,17 +1153,58 @@
 </section>
 
 <!-- ── CTA ── -->
-<section class="cta-section">
+<section class="cta-section" aria-labelledby="cta-heading">
   <div class="container">
     <div class="section-label" style="color:rgba(255,255,255,0.6)">Ready to Start?</div>
-    <h2>Your Best Smile Starts with One Call</h2>
-    <p>Consultations are always complimentary at Rex Johnson Orthodontics. Reach out today and let Dr. Johnson show you what's possible.</p>
-    <a href="tel:3036592142" class="cta-phone">(303) 659-2142</a>
+    <h2 id="cta-heading">Your Best Smile Starts with One Call</h2>
+    <p>Consultations are always complimentary at Rex Johnson Orthodontics. Reach out today and let Dr. Johnson show you what's possible for your smile.</p>
+    <div style="margin-bottom:28px;">
+      <a href="tel:3036592142" class="cta-phone">(303) 659-2142</a>
+    </div>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
       <a href="#contact" class="btn-primary">Request Online Consultation</a>
-      <a href="mailto:info@rexjohnsonortho.com" class="btn-outline">Email Our Office</a>
+      <a href="mailto:rjorthodontics@yahoo.com" class="btn-outline">Email Our Office</a>
     </div>
-    <p style="margin-top:24px;color:rgba(255,255,255,0.55);font-size:0.85rem;">481 S. 8th Ave., Brighton, CO 80601 &nbsp;|&nbsp; info@rexjohnsonortho.com</p>
+    <p style="margin-top:24px;color:rgba(255,255,255,0.55);font-size:0.85rem;">481 S. 8th Ave., Brighton, CO 80601 &nbsp;|&nbsp; rjorthodontics@yahoo.com</p>
+  </div>
+</section>
+
+<!-- ── CONTACT / MAP SECTION ── -->
+<section class="contact-section" aria-labelledby="location-heading">
+  <div class="container">
+    <div class="section-label">Find Us</div>
+    <h2 id="location-heading" class="section-title">Visit Rex Johnson Orthodontics in Brighton, CO</h2>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <h3>Office Information</h3>
+        <div class="contact-detail-row">
+          <span class="contact-detail-icon">📍</span>
+          <p><strong>Address</strong>481 S. 8th Ave., Brighton, CO 80601</p>
+        </div>
+        <div class="contact-detail-row">
+          <span class="contact-detail-icon">📞</span>
+          <p><strong>Phone</strong><a href="tel:3036592142" style="color:var(--teal);font-weight:600;">(303) 659-2142</a></p>
+        </div>
+        <div class="contact-detail-row">
+          <span class="contact-detail-icon">✉️</span>
+          <p><strong>Email</strong><a href="mailto:rjorthodontics@yahoo.com" style="color:var(--teal);font-weight:600;">rjorthodontics@yahoo.com</a></p>
+        </div>
+        <div class="contact-detail-row">
+          <span class="contact-detail-icon">🗺️</span>
+          <p><strong>Serving</strong>Brighton, Commerce City, Thornton, Fort Lupton, Henderson, Lochbuie &amp; Adams County</p>
+        </div>
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="#contact" class="btn-primary">Request a Consultation</a>
+          <a href="https://www.google.com/maps/search/Rex+A.+Johnson+DDS+PC+Brighton+CO" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 22px;border:2px solid var(--border);border-radius:6px;font-weight:700;font-size:0.9rem;color:var(--navy);">Get Directions →</a>
+        </div>
+      </div>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.5!2d-104.8198!3d39.9714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c5f8e5b1e1e1e%3A0x1!2s481+S+8th+Ave%2C+Brighton%2C+CO+80601!5e0!3m2!1sen!2sus!4v1"
+          width="100%" height="380" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Rex Johnson Orthodontics location — 481 S. 8th Ave., Brighton, CO"></iframe>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1150,62 +1216,92 @@
       <div class="footer-logo-tag">Brighton, Colorado's Family Orthodontist</div>
       <div class="contact-detail">📍 481 S. 8th Ave., Brighton, CO 80601</div>
       <div class="contact-detail">📞 <a href="tel:3036592142" style="color:rgba(255,255,255,0.65);">(303) 659-2142</a></div>
-      <div class="contact-detail">✉️ <a href="mailto:info@rexjohnsonortho.com" style="color:rgba(255,255,255,0.65);">info@rexjohnsonortho.com</a></div>
-      <p style="font-size:0.82rem;margin-top:12px;">Serving Brighton, Commerce City, Thornton, Fort Lupton, Henderson, Lochbuie & surrounding Adams County communities.</p>
+      <div class="contact-detail">✉️ <a href="mailto:rjorthodontics@yahoo.com" style="color:rgba(255,255,255,0.65);">rjorthodontics@yahoo.com</a></div>
+      <p style="font-size:0.82rem;margin-top:12px;">Serving Brighton, Commerce City, Thornton, Fort Lupton, Henderson, Lochbuie &amp; surrounding Adams County communities.</p>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
-        <li>Traditional Metal Braces</li>
-        <li>Clear Ceramic Braces</li>
-        <li>Invisalign® Aligners</li>
-        <li>Children's Orthodontics</li>
-        <li>Teen Orthodontics</li>
-        <li>Adult Orthodontics</li>
-        <li>Orthodontic Retainers</li>
+        <li><a href="/areas-of-service/">Traditional Metal Braces</a></li>
+        <li><a href="/areas-of-service/">Clear Ceramic Braces</a></li>
+        <li><a href="/areas-of-service/">Invisalign® Aligners</a></li>
+        <li><a href="/areas-of-service/">Children's Orthodontics</a></li>
+        <li><a href="/areas-of-service/">Teen Orthodontics</a></li>
+        <li><a href="/areas-of-service/">Adult Orthodontics</a></li>
+        <li><a href="/areas-of-service/">Orthodontic Retainers</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Practice</h4>
       <ul>
-        <li>Meet Dr. Johnson</li>
-        <li>Free Consultation</li>
-        <li>Patient FAQ</li>
-        <li>Financing Options</li>
-        <li>Contact &amp; Location</li>
+        <li><a href="/about/">Meet Dr. Johnson</a></li>
+        <li><a href="#contact">Free Consultation</a></li>
+        <li><a href="#faq">Patient FAQ</a></li>
+        <li><a href="/areas-of-service/">Areas We Serve</a></li>
+        <li><a href="/smile-games/">Smile Games</a></li>
+        <li><a href="#contact">Contact &amp; Location</a></li>
       </ul>
       <h4 style="margin-top:20px;">Quick Contact</h4>
       <ul>
-        <li><a href="tel:3036592142" style="color:var(--teal-light);">(303) 659-2142</a></li>
-        <li><a href="mailto:info@rexjohnsonortho.com" style="color:var(--teal-light);">info@rexjohnsonortho.com</a></li>
+        <li><a href="tel:3036592142">(303) 659-2142</a></li>
+        <li><a href="mailto:rjorthodontics@yahoo.com">rjorthodontics@yahoo.com</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Rex Johnson Orthodontics — Brighton, CO Orthodontist. All rights reserved.</span>
-    <span style="color:rgba(255,255,255,0.35);font-size:0.72rem;">Website by <a href="https://eyetoad.com" style="color:rgba(255,255,255,0.35);">Eye To Ad Media</a> — Brighton SEO &amp; Digital Marketing</span>
+    <span style="color:rgba(255,255,255,0.35);font-size:0.72rem;">Website by <a href="https://eyetoad.com" style="color:rgba(255,255,255,0.35);" rel="noopener">Eye To Ad Media</a> — Brighton SEO &amp; Digital Marketing</span>
   </div>
 </footer>
 
 <script>
   // Mobile menu
   function toggleMenu() {
-    document.getElementById('mobileNav').classList.toggle('open');
+    const nav = document.getElementById('mobileNav');
+    const hamburger = document.querySelector('.hamburger');
+    const isOpen = nav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    nav.setAttribute('aria-hidden', !isOpen);
   }
 
-  // FAQ accordion
+  // FAQ accordion — accessible
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+    const answer = item.querySelector('.faq-a');
+    const isOpen = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    if (isOpen) {
+      answer.removeAttribute('hidden');
+    } else {
+      answer.setAttribute('hidden', '');
+    }
   }
 
   // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Show thank-you message if form was submitted
+  if (window.location.search.includes('submitted=true')) {
+    const form = document.querySelector('.hero-form-card');
+    if (form) {
+      form.innerHTML = `
+        <div style="text-align:center;padding:30px 10px;">
+          <div style="font-size:3rem;margin-bottom:12px;">✅</div>
+          <h3 style="color:var(--navy);margin-bottom:10px;">Thank You!</h3>
+          <p style="font-size:0.95rem;color:var(--text-mid);">We received your request and will contact you within one business day to confirm your free consultation.</p>
+          <p style="margin-top:12px;"><strong><a href="tel:3036592142" style="color:var(--teal);">(303) 659-2142</a></strong><br><span style="font-size:0.82rem;color:var(--text-light);">Or call us directly to schedule faster.</span></p>
+        </div>`;
+    }
+  }
 </script>
 
 </body>
