@@ -1,1 +1,1504 @@
-keep
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smile Games | Fun for Kids in the Waiting Room | Rex Johnson Orthodontics</title>
+<meta name="description" content="Play games while you wait! Drawing pad, crossword, Sudoku, ABC learning, math challenges, and smile trivia at Rex Johnson Orthodontics in Brighton, CO.">
+<link rel="canonical" href="https://www.brightonorthodontist.com/smile-games/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════
+   ROOT & RESET
+═══════════════════════════════════════════ */
+:root {
+  --navy: #0d2b45;
+  --navy-light: #163d61;
+  --teal: #1a8fa0;
+  --teal-light: #24b8cf;
+  --gold: #c9a84c;
+  --gold-light: #f0d070;
+  --cream: #faf7f2;
+  --warm-white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #3d4a5c;
+  --text-light: #6b7a8d;
+  --border: #e2ddd6;
+  /* Game colors */
+  --game-pink: #ff6b9d;
+  --game-purple: #9b5de5;
+  --game-orange: #f7931e;
+  --game-green: #00c896;
+  --game-blue: #3b9ae1;
+  --game-red: #ff4757;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--navy); line-height: 1.2; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: 'Nunito', sans-serif; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+/* ═══════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════ */
+header {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 200;
+  box-shadow: 0 2px 12px rgba(13,43,69,0.07);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px; max-width: 1140px; margin: 0 auto;
+}
+.logo-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--navy); }
+.logo-tagline { font-size: 0.72rem; color: var(--teal); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+nav { display: flex; gap: 24px; align-items: center; }
+nav a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color 0.2s; }
+nav a:hover, nav a.active { color: var(--teal); }
+.btn-header {
+  background: var(--teal); color: #fff !important;
+  padding: 10px 22px; border-radius: 6px;
+  font-size: 0.85rem; font-weight: 700; white-space: nowrap;
+  transition: background 0.2s;
+}
+.btn-header:hover { background: var(--navy); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; }
+.mobile-nav { display: none; flex-direction: column; background: var(--warm-white); border-top: 1px solid var(--border); }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { padding: 14px 24px; font-size: 0.95rem; font-weight: 500; color: var(--text-mid); border-bottom: 1px solid var(--border); display: block; }
+.mobile-nav .btn-header { margin: 16px 24px 20px; display: inline-block; text-align: center; }
+@media (max-width: 768px) { nav { display: none; } .hamburger { display: flex; } }
+
+/* ═══════════════════════════════════════════
+   BREADCRUMB
+═══════════════════════════════════════════ */
+.breadcrumb { background: var(--warm-white); border-bottom: 1px solid var(--border); padding: 12px 0; }
+.breadcrumb-inner { max-width: 1140px; margin: 0 auto; padding: 0 24px; font-size: 0.8rem; color: var(--text-light); display: flex; align-items: center; gap: 8px; }
+.breadcrumb-inner a { color: var(--teal); }
+
+/* ═══════════════════════════════════════════
+   PAGE HERO
+═══════════════════════════════════════════ */
+.page-hero {
+  background: linear-gradient(135deg, #1a3a5c 0%, #0e5f7a 50%, #1a8fa0 100%);
+  padding: 56px 0 48px; position: relative; overflow: hidden; text-align: center;
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(201,168,76,0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(36,184,207,0.2) 0%, transparent 50%);
+}
+/* Floating emoji decoration */
+.hero-floats { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.hero-float {
+  position: absolute; font-size: 2rem; opacity: 0.18;
+  animation: floatUp 6s ease-in-out infinite;
+}
+.hero-float:nth-child(1) { left: 5%; top: 20%; animation-delay: 0s; font-size: 1.8rem; }
+.hero-float:nth-child(2) { left: 15%; top: 60%; animation-delay: 1s; font-size: 2.2rem; }
+.hero-float:nth-child(3) { left: 82%; top: 15%; animation-delay: 0.5s; }
+.hero-float:nth-child(4) { left: 90%; top: 55%; animation-delay: 1.5s; font-size: 1.6rem; }
+.hero-float:nth-child(5) { left: 50%; top: 10%; animation-delay: 2s; font-size: 1.4rem; }
+.hero-float:nth-child(6) { left: 70%; top: 70%; animation-delay: 0.8s; font-size: 2.4rem; }
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-16px) rotate(8deg); }
+}
+.page-hero-inner { position: relative; max-width: 700px; margin: 0 auto; padding: 0 24px; }
+.page-hero-badge {
+  display: inline-block; background: rgba(201,168,76,0.2);
+  border: 1px solid rgba(201,168,76,0.5); color: var(--gold-light);
+  font-family: 'Nunito', sans-serif; font-size: 0.78rem; font-weight: 800;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 20px; margin-bottom: 16px;
+}
+.page-hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 12px; }
+.page-hero h1 span { color: var(--gold-light); }
+.page-hero-sub { color: rgba(255,255,255,0.78); font-size: 1.05rem; font-family: 'Nunito', sans-serif; font-weight: 600; }
+
+/* ═══════════════════════════════════════════
+   INTRO COPY
+═══════════════════════════════════════════ */
+.intro-section { padding: 52px 0 40px; background: var(--warm-white); }
+.intro-inner { max-width: 780px; margin: 0 auto; text-align: center; padding: 0 24px; }
+.intro-inner h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 16px; }
+.intro-inner p { color: var(--text-mid); font-size: 1rem; line-height: 1.78; margin-bottom: 1rem; }
+.intro-inner p:last-child { margin-bottom: 0; }
+
+/* ═══════════════════════════════════════════
+   GAME LAUNCHER GRID
+═══════════════════════════════════════════ */
+.games-section { padding: 48px 0 64px; }
+.games-section-label {
+  text-align: center; font-family: 'Nunito', sans-serif;
+  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 10px;
+}
+.games-section-title {
+  text-align: center; font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  margin-bottom: 40px; color: var(--navy);
+}
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) { .games-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .games-grid { grid-template-columns: 1fr; } }
+
+.game-card {
+  border-radius: 20px; padding: 32px 24px;
+  cursor: pointer; transition: transform 0.22s cubic-bezier(.34,1.56,.64,1), box-shadow 0.22s;
+  position: relative; overflow: hidden; border: 2px solid transparent;
+  text-align: center;
+}
+.game-card::before {
+  content: ''; position: absolute; inset: 0; opacity: 0.08;
+  background: radial-gradient(circle at 70% 20%, #fff 0%, transparent 70%);
+  pointer-events: none;
+}
+.game-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 16px 48px rgba(0,0,0,0.18); }
+.game-card:active { transform: translateY(-2px) scale(0.99); }
+
+.game-card-1 { background: linear-gradient(140deg, #ff6b9d, #ff9671); }
+.game-card-2 { background: linear-gradient(140deg, #9b5de5, #6b3fc0); }
+.game-card-3 { background: linear-gradient(140deg, #00c896, #009e75); }
+.game-card-4 { background: linear-gradient(140deg, #3b9ae1, #1a6db5); }
+.game-card-5 { background: linear-gradient(140deg, #f7931e, #e05c00); }
+.game-card-6 { background: linear-gradient(140deg, #1a8fa0, #0d5a6b); }
+
+.game-card-emoji { font-size: 3.2rem; margin-bottom: 14px; display: block; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2)); }
+.game-card h3 { color: #fff; font-family: 'Nunito', sans-serif; font-size: 1.35rem; font-weight: 900; margin-bottom: 8px; }
+.game-card p { color: rgba(255,255,255,0.85); font-size: 0.85rem; line-height: 1.5; margin: 0; }
+.game-card-tag {
+  display: inline-block; margin-top: 14px;
+  background: rgba(255,255,255,0.22); color: #fff;
+  font-family: 'Nunito', sans-serif; font-size: 0.72rem; font-weight: 800;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 12px;
+}
+
+/* ═══════════════════════════════════════════
+   MODAL OVERLAY
+═══════════════════════════════════════════ */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(13,43,69,0.7); backdrop-filter: blur(4px);
+  align-items: center; justify-content: center;
+  padding: 16px;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--cream); border-radius: 20px;
+  width: 100%; max-width: 860px; max-height: 92vh;
+  overflow-y: auto; position: relative;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+  animation: modalIn 0.3s cubic-bezier(.34,1.56,.64,1) both;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.88) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.modal-header {
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; background: var(--cream); z-index: 10;
+  border-radius: 20px 20px 0 0;
+}
+.modal-title { font-family: 'Nunito', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--navy); display: flex; align-items: center; gap: 10px; }
+.modal-close {
+  background: var(--border); border: none; border-radius: 50%;
+  width: 36px; height: 36px; font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s; color: var(--text-mid);
+}
+.modal-close:hover { background: var(--navy); color: #fff; }
+.modal-body { padding: 24px 28px 32px; }
+
+/* ═══════════════════════════════════════════
+   GAME: DRAW PAD
+═══════════════════════════════════════════ */
+.draw-toolbar {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  padding: 14px 16px; background: var(--warm-white);
+  border-radius: 12px; border: 1px solid var(--border); margin-bottom: 14px;
+}
+.draw-toolbar-group { display: flex; gap: 8px; align-items: center; }
+.draw-toolbar-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); }
+.color-swatch {
+  width: 30px; height: 30px; border-radius: 50%; border: 3px solid transparent;
+  cursor: pointer; transition: transform 0.15s, border-color 0.15s;
+}
+.color-swatch:hover { transform: scale(1.2); }
+.color-swatch.active { border-color: var(--navy); transform: scale(1.15); }
+.brush-btn {
+  background: var(--cream); border: 2px solid var(--border);
+  border-radius: 8px; padding: 5px 12px;
+  font-size: 0.78rem; font-weight: 700; color: var(--text-mid);
+  transition: background 0.15s, border-color 0.15s;
+}
+.brush-btn.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+.stamp-btn {
+  font-size: 1.3rem; background: var(--cream); border: 2px solid var(--border);
+  border-radius: 8px; padding: 4px 8px; transition: background 0.15s;
+}
+.stamp-btn.active { background: var(--gold-light); border-color: var(--gold); }
+.draw-action-btn {
+  padding: 8px 16px; border-radius: 8px; border: none;
+  font-family: 'Nunito', sans-serif; font-size: 0.82rem; font-weight: 800;
+  transition: transform 0.15s, opacity 0.15s;
+}
+.draw-action-btn:hover { transform: translateY(-1px); }
+.btn-clear { background: #ff4757; color: #fff; }
+.btn-save { background: var(--teal); color: #fff; }
+#drawCanvas {
+  border-radius: 12px; border: 2px solid var(--border);
+  cursor: crosshair; display: block; width: 100%;
+  background: #fff; touch-action: none;
+}
+
+/* ═══════════════════════════════════════════
+   GAME: CROSSWORD
+═══════════════════════════════════════════ */
+.level-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+.level-tab {
+  padding: 8px 20px; border-radius: 8px; border: 2px solid var(--border);
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.88rem;
+  background: var(--warm-white); color: var(--text-mid);
+  transition: all 0.2s;
+}
+.level-tab.active { background: var(--teal); color: #fff; border-color: var(--teal); }
+.cw-layout { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; }
+@media (max-width: 640px) { .cw-layout { grid-template-columns: 1fr; } }
+.cw-grid { display: inline-grid; gap: 2px; }
+.cw-cell {
+  width: 38px; height: 38px; position: relative;
+}
+.cw-cell input {
+  width: 100%; height: 100%; text-align: center; text-transform: uppercase;
+  font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 800;
+  border: 2px solid #ccc; border-radius: 4px; background: #fff;
+  color: var(--navy); outline: none; transition: border-color 0.15s, background 0.15s;
+}
+.cw-cell input:focus { border-color: var(--teal); background: rgba(26,143,160,0.06); }
+.cw-cell input.correct { background: rgba(0,200,150,0.15); border-color: var(--game-green); color: var(--game-green); }
+.cw-cell input.wrong { background: rgba(255,71,87,0.1); border-color: var(--game-red); animation: shake 0.3s; }
+.cw-cell input.black { background: var(--navy); border-color: var(--navy); pointer-events: none; }
+.cw-num { position: absolute; top: 2px; left: 3px; font-size: 0.5rem; font-weight: 800; color: var(--text-light); line-height: 1; pointer-events: none; }
+.cw-clues h4 { font-family: 'Nunito', sans-serif; font-size: 0.8rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: var(--teal); margin-bottom: 8px; margin-top: 14px; }
+.cw-clues h4:first-child { margin-top: 0; }
+.cw-clue { font-size: 0.84rem; color: var(--text-mid); margin-bottom: 5px; padding-left: 4px; }
+.cw-clue strong { color: var(--navy); }
+.cw-actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.game-btn {
+  padding: 10px 22px; border-radius: 8px; border: none;
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.88rem;
+  transition: transform 0.15s, opacity 0.2s;
+}
+.game-btn:hover { transform: translateY(-1px); }
+.game-btn-teal { background: var(--teal); color: #fff; }
+.game-btn-gold { background: var(--gold); color: var(--navy); }
+.game-btn-red { background: var(--game-red); color: #fff; }
+.cw-score { font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--navy); font-size: 1rem; }
+
+/* ═══════════════════════════════════════════
+   GAME: SUDOKU
+═══════════════════════════════════════════ */
+.sudoku-wrap { display: flex; flex-direction: column; align-items: center; }
+.sudoku-controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; justify-content: center; margin-bottom: 16px; }
+.sudoku-timer { font-family: 'Nunito', sans-serif; font-size: 1.1rem; font-weight: 900; color: var(--navy); background: var(--warm-white); border: 2px solid var(--border); padding: 6px 18px; border-radius: 8px; }
+#sudokuGrid {
+  display: grid; grid-template-columns: repeat(9, 1fr); gap: 1px;
+  background: var(--navy); border: 3px solid var(--navy); border-radius: 8px;
+  overflow: hidden; width: min(100%, 450px);
+}
+.s-cell {
+  aspect-ratio: 1; background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Nunito', sans-serif; font-size: clamp(0.75rem, 1.8vw, 1.05rem);
+  font-weight: 800; color: var(--navy); border: none;
+  transition: background 0.15s;
+}
+.s-cell.given { color: var(--navy); background: #f0f4f8; }
+.s-cell.editable {
+  color: var(--teal); cursor: pointer;
+}
+.s-cell.editable:hover { background: rgba(26,143,160,0.1); }
+.s-cell.selected { background: rgba(26,143,160,0.2) !important; }
+.s-cell.error { color: var(--game-red) !important; background: rgba(255,71,87,0.1) !important; }
+.s-cell.box-right { border-right: 2px solid var(--navy) !important; }
+.s-cell.box-bottom { border-bottom: 2px solid var(--navy) !important; }
+.sudoku-numpad { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; justify-content: center; }
+.numpad-btn {
+  width: 44px; height: 44px; border-radius: 10px; border: 2px solid var(--border);
+  font-family: 'Nunito', sans-serif; font-size: 1.1rem; font-weight: 900;
+  background: var(--warm-white); color: var(--navy);
+  transition: background 0.15s, transform 0.1s;
+}
+.numpad-btn:hover { background: var(--teal); color: #fff; border-color: var(--teal); transform: translateY(-2px); }
+.numpad-erase { background: #fee; border-color: var(--game-red); color: var(--game-red); font-size: 0.85rem; width: auto; padding: 0 12px; }
+
+/* ═══════════════════════════════════════════
+   GAME: LEARN & PLAY
+═══════════════════════════════════════════ */
+.learn-tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+.learn-tab {
+  padding: 9px 18px; border-radius: 20px; border: 2px solid var(--border);
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.85rem;
+  background: var(--warm-white); color: var(--text-mid); transition: all 0.2s;
+}
+.learn-tab.active { background: var(--game-purple); color: #fff; border-color: var(--game-purple); }
+
+/* ABC */
+.abc-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.abc-btn {
+  width: 58px; height: 58px; border-radius: 12px; border: none;
+  font-family: 'Nunito', sans-serif; font-size: 1.5rem; font-weight: 900;
+  color: #fff; transition: transform 0.15s cubic-bezier(.34,1.56,.64,1), box-shadow 0.15s;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+}
+.abc-btn:hover { transform: translateY(-3px); box-shadow: 0 7px 0 rgba(0,0,0,0.15); }
+.abc-btn:active { transform: translateY(1px); box-shadow: 0 2px 0 rgba(0,0,0,0.2); }
+.abc-display {
+  text-align: center; padding: 24px; background: var(--warm-white);
+  border-radius: 16px; border: 2px solid var(--border); margin-bottom: 20px;
+  min-height: 100px; display: flex; align-items: center; justify-content: center; flex-direction: column;
+}
+.abc-big-letter { font-family: 'Nunito', sans-serif; font-size: 5rem; font-weight: 900; line-height: 1; }
+.abc-word { font-family: 'Nunito', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--text-mid); margin-top: 4px; }
+.abc-emoji { font-size: 2rem; }
+
+/* MATH */
+.math-problem {
+  text-align: center; padding: 32px 24px;
+  background: var(--warm-white); border-radius: 16px; border: 2px solid var(--border);
+  margin-bottom: 20px;
+}
+.math-equation { font-family: 'Nunito', sans-serif; font-size: 2.8rem; font-weight: 900; color: var(--navy); margin-bottom: 16px; }
+.math-input {
+  font-family: 'Nunito', sans-serif; font-size: 1.8rem; font-weight: 900;
+  text-align: center; width: 120px; padding: 10px;
+  border: 3px solid var(--border); border-radius: 12px; color: var(--navy);
+  outline: none; transition: border-color 0.2s;
+}
+.math-input:focus { border-color: var(--teal); }
+.math-feedback {
+  font-family: 'Nunito', sans-serif; font-size: 1.2rem; font-weight: 800;
+  padding: 10px 24px; border-radius: 10px; margin-top: 14px; display: inline-block;
+  min-height: 44px;
+}
+.math-feedback.correct { background: rgba(0,200,150,0.15); color: var(--game-green); }
+.math-feedback.wrong { background: rgba(255,71,87,0.1); color: var(--game-red); }
+.math-stats { display: flex; gap: 24px; justify-content: center; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.9rem; color: var(--text-mid); margin-bottom: 16px; }
+.math-stat-num { font-size: 1.4rem; color: var(--navy); display: block; }
+
+/* SMILE FACTS */
+.facts-card {
+  background: var(--warm-white); border-radius: 16px; border: 2px solid var(--border);
+  padding: 32px 28px; text-align: center; min-height: 200px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  margin-bottom: 16px; position: relative; overflow: hidden;
+}
+.facts-card::before {
+  content: ''; position: absolute; top: -30px; right: -30px;
+  width: 120px; height: 120px; border-radius: 50%;
+  background: rgba(26,143,160,0.06);
+}
+.facts-emoji { font-size: 3rem; margin-bottom: 12px; }
+.facts-category {
+  font-family: 'Nunito', sans-serif; font-size: 0.72rem; font-weight: 900;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px;
+}
+.facts-text { font-family: 'Nunito', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--navy); line-height: 1.5; }
+.facts-nav { display: flex; gap: 12px; justify-content: center; align-items: center; }
+.facts-nav-btn {
+  width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--border);
+  font-size: 1.2rem; background: var(--warm-white); transition: all 0.15s;
+}
+.facts-nav-btn:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+.facts-counter { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.9rem; color: var(--text-light); }
+
+/* ═══════════════════════════════════════════
+   GAME: TRIVIA
+═══════════════════════════════════════════ */
+.trivia-progress { height: 8px; background: var(--border); border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
+.trivia-progress-bar { height: 100%; background: linear-gradient(90deg, var(--teal), var(--teal-light)); border-radius: 4px; transition: width 0.4s ease; }
+.trivia-q-num { font-family: 'Nunito', sans-serif; font-size: 0.8rem; font-weight: 800; color: var(--text-light); margin-bottom: 8px; }
+.trivia-question { font-family: 'Nunito', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: 20px; line-height: 1.4; }
+.trivia-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 500px) { .trivia-options { grid-template-columns: 1fr; } }
+.trivia-opt {
+  padding: 14px 18px; border-radius: 12px;
+  border: 2px solid var(--border); background: var(--warm-white);
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.92rem;
+  color: var(--navy); text-align: left; transition: all 0.2s;
+}
+.trivia-opt:hover:not(:disabled) { border-color: var(--teal); background: rgba(26,143,160,0.07); transform: translateY(-1px); }
+.trivia-opt.correct { background: rgba(0,200,150,0.15); border-color: var(--game-green); color: var(--game-green); }
+.trivia-opt.wrong { background: rgba(255,71,87,0.1); border-color: var(--game-red); color: var(--game-red); }
+.trivia-opt:disabled { cursor: default; }
+.trivia-feedback { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.95rem; margin-top: 14px; min-height: 24px; color: var(--text-mid); }
+.trivia-result { text-align: center; padding: 20px 0; }
+.trivia-score-big { font-family: 'Nunito', sans-serif; font-size: 4rem; font-weight: 900; color: var(--teal); line-height: 1; }
+.trivia-score-label { font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text-mid); margin-bottom: 20px; }
+.trivia-message { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--navy); margin-bottom: 24px; }
+
+/* ═══════════════════════════════════════════
+   GAME: WORD SCRAMBLE
+═══════════════════════════════════════════ */
+.scramble-display {
+  background: var(--warm-white); border-radius: 16px; border: 2px solid var(--border);
+  padding: 28px; text-align: center; margin-bottom: 20px;
+}
+.scramble-emoji { font-size: 2.5rem; margin-bottom: 10px; }
+.scramble-hint { font-family: 'Nunito', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--text-light); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em; }
+.scramble-letters { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+.scramble-letter {
+  width: 48px; height: 56px; border-radius: 10px;
+  background: linear-gradient(145deg, var(--teal-light), var(--teal));
+  color: #fff; font-family: 'Nunito', sans-serif; font-size: 1.5rem; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.15); transition: transform 0.1s;
+}
+.scramble-answer { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; min-height: 56px; }
+.scramble-slot {
+  width: 48px; height: 56px; border-radius: 10px;
+  border: 2px dashed var(--border); background: rgba(26,143,160,0.04);
+  font-family: 'Nunito', sans-serif; font-size: 1.5rem; font-weight: 900;
+  color: var(--navy); display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background 0.15s;
+}
+.scramble-slot.filled { background: rgba(201,168,76,0.15); border-color: var(--gold); cursor: pointer; }
+.scramble-slot.correct-slot { background: rgba(0,200,150,0.15); border-color: var(--game-green); color: var(--game-green); }
+.scramble-feedback { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem; min-height: 28px; }
+.scramble-feedback.win { color: var(--game-green); }
+.scramble-feedback.lose { color: var(--game-red); }
+.scramble-score { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.9rem; color: var(--text-light); margin-bottom: 12px; text-align: center; }
+
+/* ═══════════════════════════════════════════
+   SHARED / UTILITIES
+═══════════════════════════════════════════ */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+@keyframes popIn {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.pop { animation: popIn 0.3s cubic-bezier(.34,1.56,.64,1) both; }
+
+/* ═══════════════════════════════════════════
+   CTA BAND & FOOTER
+═══════════════════════════════════════════ */
+.cta-band { background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%); padding: 56px 0; text-align: center; }
+.cta-band h2 { color: #fff; font-size: clamp(1.7rem, 3.5vw, 2.4rem); margin-bottom: 12px; }
+.cta-band p { color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto 28px; }
+.cta-band-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-gold { background: var(--gold); color: var(--navy); padding: 13px 28px; border-radius: 8px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.95rem; display: inline-block; transition: background 0.2s; }
+.btn-gold:hover { background: var(--gold-light); }
+.btn-outline-white { border: 2px solid rgba(255,255,255,0.5); color: #fff; padding: 13px 28px; border-radius: 8px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.95rem; display: inline-block; transition: background 0.2s; }
+.btn-outline-white:hover { background: rgba(255,255,255,0.12); }
+footer { background: var(--navy); color: rgba(255,255,255,0.72); padding: 60px 0 0; }
+.footer-grid { max-width: 1140px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.footer-logo-tag { font-size: 0.75rem; color: var(--teal-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+.footer-col h4 { color: #fff; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 8px; font-size: 0.88rem; }
+.footer-col ul li a { color: rgba(255,255,255,0.72); transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--teal-light); }
+.footer-bottom { max-width: 1140px; margin: 0 auto; padding: 20px 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+.contact-detail { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 0.88rem; }
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo-block">
+      <span class="logo-name">Rex Johnson Orthodontics</span>
+      <span class="logo-tagline">Brighton, Colorado's Family Orthodontist</span>
+    </a>
+    <nav>
+      <a href="/about/">About Dr. Johnson</a>
+      <a href="/areas-of-service/">Areas We Serve</a>
+      <a href="/#services">Services</a>
+      <a href="/smile-games/" class="active">Smile Games</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact" class="btn-header">Free Consultation</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/about/">About Dr. Johnson</a>
+    <a href="/areas-of-service/">Areas We Serve</a>
+    <a href="/#services">Services</a>
+    <a href="/smile-games/">Smile Games</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#contact">Request Appointment</a>
+    <a href="tel:3036592142" class="btn-header">📞 (303) 659-2142</a>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="/">Home</a>
+    <span style="color:var(--border)">›</span>
+    <span>Smile Games</span>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero-floats" aria-hidden="true">
+    <span class="hero-float">🦷</span>
+    <span class="hero-float">😁</span>
+    <span class="hero-float">⭐</span>
+    <span class="hero-float">🎨</span>
+    <span class="hero-float">🧩</span>
+    <span class="hero-float">✏️</span>
+  </div>
+  <div class="page-hero-inner">
+    <div class="page-hero-badge">🎮 The Waiting Room Just Got Better</div>
+    <h1>Welcome to<br><span>Smile Games!</span></h1>
+    <p class="page-hero-sub">Draw, learn, play, and discover cool facts about your teeth — while you wait for Dr. Johnson! 😄</p>
+  </div>
+</section>
+
+<!-- INTRO COPY -->
+<section class="intro-section">
+  <div class="intro-inner">
+    <h2>Fun for Every Kid in the Waiting Room</h2>
+    <p>At Rex Johnson Orthodontics, we believe your visit should be something to look forward to — not just something to sit through. That's why we built Smile Games: a collection of fun, kid-friendly activities you can play right here on any phone, tablet, or computer while you wait.</p>
+    <p>Draw your own masterpiece on our digital canvas. Challenge yourself with orthodontics-themed crossword puzzles or Sudoku brain-teasers. Learn your ABCs or test your math skills at your own level. Flip through surprising smile facts that even most adults don't know. Or take our Smile Trivia quiz and see how much you know about teeth, braces, and Dr. Rex's practice!</p>
+    <p>Whether you're seven years old or seventeen, there's something here for you. Pick a game below and jump right in. No download needed — just tap and play. 🎉</p>
+  </div>
+</section>
+
+<!-- GAME LAUNCHER -->
+<section class="games-section">
+  <div class="container">
+    <div class="games-section-label">Choose Your Game</div>
+    <h2 class="games-section-title">Pick Something Fun! 👇</h2>
+    <div class="games-grid">
+
+      <div class="game-card game-card-1" onclick="openGame('draw')" role="button" tabindex="0" aria-label="Open Draw Pad">
+        <span class="game-card-emoji">🎨</span>
+        <h3>Draw Pad</h3>
+        <p>Color, draw, stamp emojis, and create your own smile masterpiece!</p>
+        <span class="game-card-tag">All Ages</span>
+      </div>
+
+      <div class="game-card game-card-2" onclick="openGame('crossword')" role="button" tabindex="0" aria-label="Open Smile Crossword">
+        <span class="game-card-emoji">🧩</span>
+        <h3>Smile Crossword</h3>
+        <p>Fill in the grid using orthodontic clues. Easy and Medium levels!</p>
+        <span class="game-card-tag">Ages 8+</span>
+      </div>
+
+      <div class="game-card game-card-3" onclick="openGame('sudoku')" role="button" tabindex="0" aria-label="Open Sudoku">
+        <span class="game-card-emoji">🔢</span>
+        <h3>Sudoku</h3>
+        <p>Classic number puzzle — Easy, Medium, or Hard. Timer included!</p>
+        <span class="game-card-tag">Ages 9+</span>
+      </div>
+
+      <div class="game-card game-card-4" onclick="openGame('learn')" role="button" tabindex="0" aria-label="Open Learn and Play">
+        <span class="game-card-emoji">📚</span>
+        <h3>Learn &amp; Play</h3>
+        <p>ABCs, math challenges, and Smile Facts — pick your adventure!</p>
+        <span class="game-card-tag">Ages 4+</span>
+      </div>
+
+      <div class="game-card game-card-5" onclick="openGame('trivia')" role="button" tabindex="0" aria-label="Open Smile Trivia">
+        <span class="game-card-emoji">🏆</span>
+        <h3>Smile Trivia</h3>
+        <p>10 questions about teeth, braces &amp; Dr. Rex. How high can you score?</p>
+        <span class="game-card-tag">Ages 7+</span>
+      </div>
+
+      <div class="game-card game-card-6" onclick="openGame('scramble')" role="button" tabindex="0" aria-label="Open Word Scramble">
+        <span class="game-card-emoji">🔤</span>
+        <h3>Word Scramble</h3>
+        <p>Unscramble orthodontics words before the clue runs out!</p>
+        <span class="game-card-tag">Ages 6+</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ MODALS ═══════════════════════ -->
+
+<!-- DRAW PAD -->
+<div class="modal-overlay" id="modal-draw" role="dialog" aria-modal="true" aria-label="Draw Pad">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title">🎨 Draw Pad</div>
+      <button class="modal-close" onclick="closeGame('draw')" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="draw-toolbar">
+        <div class="draw-toolbar-group">
+          <span class="draw-toolbar-label">Color</span>
+          <div id="colorSwatches"></div>
+        </div>
+        <div class="draw-toolbar-group">
+          <span class="draw-toolbar-label">Size</span>
+          <button class="brush-btn active" onclick="setBrush(4,this)">S</button>
+          <button class="brush-btn" onclick="setBrush(10,this)">M</button>
+          <button class="brush-btn" onclick="setBrush(22,this)">L</button>
+          <button class="brush-btn" onclick="setBrush(40,this)">XL</button>
+        </div>
+        <div class="draw-toolbar-group">
+          <span class="draw-toolbar-label">Stamps</span>
+          <div id="stampBtns"></div>
+        </div>
+        <div class="draw-toolbar-group" style="margin-left:auto;">
+          <button class="draw-action-btn btn-clear" onclick="clearCanvas()">🗑️ Clear</button>
+          <button class="draw-action-btn btn-save" onclick="saveCanvas()">💾 Save</button>
+        </div>
+      </div>
+      <canvas id="drawCanvas" width="800" height="480"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- CROSSWORD -->
+<div class="modal-overlay" id="modal-crossword" role="dialog" aria-modal="true" aria-label="Smile Crossword">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title">🧩 Smile Crossword</div>
+      <button class="modal-close" onclick="closeGame('crossword')" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="level-tabs">
+        <button class="level-tab active" onclick="loadCrossword('easy',this)">⭐ Easy</button>
+        <button class="level-tab" onclick="loadCrossword('medium',this)">⭐⭐ Medium</button>
+      </div>
+      <div id="cwContent"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SUDOKU -->
+<div class="modal-overlay" id="modal-sudoku" role="dialog" aria-modal="true" aria-label="Sudoku">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title">🔢 Sudoku</div>
+      <button class="modal-close" onclick="closeGame('sudoku')" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="level-tabs">
+        <button class="level-tab active" onclick="loadSudoku('easy',this)">⭐ Easy</button>
+        <button class="level-tab" onclick="loadSudoku('medium',this)">⭐⭐ Medium</button>
+        <button class="level-tab" onclick="loadSudoku('hard',this)">⭐⭐⭐ Hard</button>
+      </div>
+      <div class="sudoku-wrap">
+        <div class="sudoku-controls">
+          <div class="sudoku-timer" id="sudokuTimer">⏱ 0:00</div>
+          <button class="game-btn game-btn-teal" onclick="loadSudoku(currentSudokuLevel, document.querySelector('.level-tab.active'))">↺ New Puzzle</button>
+          <button class="game-btn game-btn-gold" onclick="sudokuCheck()">✓ Check</button>
+        </div>
+        <div id="sudokuGrid"></div>
+        <div class="sudoku-numpad" id="sudokuNumpad"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEARN & PLAY -->
+<div class="modal-overlay" id="modal-learn" role="dialog" aria-modal="true" aria-label="Learn and Play">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title">📚 Learn &amp; Play</div>
+      <button class="modal-close" onclick="closeGame('learn')" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="learn-tabs">
+        <button class="learn-tab active" onclick="switchLearn('abc',this)">🔡 ABC</button>
+        <button class="learn-tab" onclick="switchLearn('math',this)">➕ Math</button>
+        <button class="learn-tab" onclick="switchLearn('facts',this)">🦷 Smile Facts</button>
+      </div>
+      <div id="learnContent"></div>
+    </div>
+  </div>
+</div>
+
+<!-- TRIVIA -->
+<div class="modal-overlay" id="modal-trivia" role="dialog" aria-modal="true" aria-label="Smile Trivia">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title">🏆 Smile Trivia</div>
+      <button class="modal-close" onclick="closeGame('trivia')" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body" id="triviaContent"></div>
+  </div>
+</div>
+
+<!-- WORD SCRAMBLE -->
+<div class="modal-overlay" id="modal-scramble" role="dialog" aria-modal="true" aria-label="Word Scramble">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title">🔤 Word Scramble</div>
+      <button class="modal-close" onclick="closeGame('scramble')" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body" id="scrambleContent"></div>
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <div style="font-size:0.75rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:10px;font-family:'Nunito',sans-serif;">Ready for Your Real Visit?</div>
+    <h2>Schedule a Free Consultation with Dr. Johnson</h2>
+    <p>Braces, Invisalign, and clear aligners for every age — Brighton, CO's hometown orthodontist.</p>
+    <div class="cta-band-btns">
+      <a href="/#contact" class="btn-gold">Request Free Consultation</a>
+      <a href="tel:3036592142" class="btn-outline-white">📞 (303) 659-2142</a>
+    </div>
+    <p style="margin-top:20px;color:rgba(255,255,255,0.5);font-size:0.82rem;">481 S. 8th Ave., Brighton, CO 80601 &nbsp;|&nbsp; rjorthodontics@yahoo.com</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo-name">Rex Johnson Orthodontics</div>
+      <div class="footer-logo-tag">Brighton, Colorado's Family Orthodontist</div>
+      <div class="contact-detail">📍 481 S. 8th Ave., Brighton, CO 80601</div>
+      <div class="contact-detail">📞 <a href="tel:3036592142" style="color:rgba(255,255,255,0.65);">(303) 659-2142</a></div>
+      <div class="contact-detail">✉️ <a href="mailto:rjorthodontics@yahoo.com" style="color:rgba(255,255,255,0.65);">rjorthodontics@yahoo.com</a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/areas-of-service/">Traditional Braces</a></li>
+        <li><a href="/areas-of-service/">Clear Ceramic Braces</a></li>
+        <li><a href="/areas-of-service/">Invisalign®</a></li>
+        <li><a href="/areas-of-service/">Children's Ortho</a></li>
+        <li><a href="/areas-of-service/">Teen Orthodontics</a></li>
+        <li><a href="/areas-of-service/">Adult Orthodontics</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Practice</h4>
+      <ul>
+        <li><a href="/about/">Meet Dr. Johnson</a></li>
+        <li><a href="/#contact">Free Consultation</a></li>
+        <li><a href="/#faq">Patient FAQ</a></li>
+        <li><a href="/areas-of-service/">Areas We Serve</a></li>
+        <li><a href="/smile-games/">Smile Games</a></li>
+      </ul>
+      <h4 style="margin-top:20px;">Quick Contact</h4>
+      <ul>
+        <li><a href="tel:3036592142">(303) 659-2142</a></li>
+        <li><a href="mailto:rjorthodontics@yahoo.com" style="font-size:0.8rem;">rjorthodontics@yahoo.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Rex Johnson Orthodontics — Brighton, CO Orthodontist. All rights reserved.</span>
+    <span>Website by <a href="https://eyetoad.com" style="color:rgba(255,255,255,0.35);" rel="noopener">Eye To Ad Media</a></span>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════════════════════ */
+function toggleMenu() {
+  const nav = document.getElementById('mobileNav');
+  nav.classList.toggle('open');
+}
+
+/* ═══════════════════════════════════════════════════
+   MODAL SYSTEM
+═══════════════════════════════════════════════════ */
+function openGame(id) {
+  document.getElementById('modal-' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if (id === 'draw') initDraw();
+  if (id === 'crossword') loadCrossword('easy', document.querySelector('#modal-crossword .level-tab'));
+  if (id === 'sudoku') loadSudoku('easy', document.querySelector('#modal-sudoku .level-tab'));
+  if (id === 'learn') switchLearn('abc', document.querySelector('#modal-learn .learn-tab'));
+  if (id === 'trivia') startTrivia();
+  if (id === 'scramble') startScramble();
+}
+function closeGame(id) {
+  document.getElementById('modal-' + id).classList.remove('open');
+  document.body.style.overflow = '';
+  if (id === 'sudoku') stopSudokuTimer();
+}
+document.querySelectorAll('.modal-overlay').forEach(m => {
+  m.addEventListener('click', e => { if (e.target === m) { const id = m.id.replace('modal-',''); closeGame(id); } });
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => { const id = m.id.replace('modal-',''); closeGame(id); });
+});
+document.querySelectorAll('.game-card').forEach(c => {
+  c.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') c.click(); });
+});
+
+/* ═══════════════════════════════════════════════════
+   DRAW PAD
+═══════════════════════════════════════════════════ */
+const COLORS = ['#1a8fa0','#0d2b45','#c9a84c','#ff6b9d','#9b5de5','#f7931e','#00c896','#ff4757','#3b9ae1','#222','#fff'];
+const STAMPS = ['😁','🦷','⭐','❤️','🌈','🎨','🔥','🐶','🦄','👑'];
+let drawCtx, isDrawing = false, brushSize = 4, currentColor = '#1a8fa0', stampMode = null;
+
+function initDraw() {
+  const canvas = document.getElementById('drawCanvas');
+  if (canvas._initialized) return;
+  canvas._initialized = true;
+  drawCtx = canvas.getContext('2d');
+  // Swatches
+  const sc = document.getElementById('colorSwatches');
+  sc.style.display='flex'; sc.style.gap='6px'; sc.style.flexWrap='wrap';
+  COLORS.forEach((c,i) => {
+    const s = document.createElement('button');
+    s.className = 'color-swatch' + (i===0?' active':'');
+    s.style.background = c;
+    if (c === '#fff') s.style.border = '3px solid #ddd';
+    s.onclick = () => { stampMode = null; currentColor = c; document.querySelectorAll('.color-swatch').forEach(x=>x.classList.remove('active')); s.classList.add('active'); document.querySelectorAll('.stamp-btn').forEach(x=>x.classList.remove('active')); };
+    sc.appendChild(s);
+  });
+  // Stamp buttons
+  const sb = document.getElementById('stampBtns');
+  sb.style.display='flex'; sb.style.gap='5px'; sb.style.flexWrap='wrap';
+  STAMPS.forEach(em => {
+    const b = document.createElement('button');
+    b.className = 'stamp-btn'; b.textContent = em;
+    b.onclick = () => { stampMode = em; document.querySelectorAll('.stamp-btn').forEach(x=>x.classList.remove('active')); b.classList.add('active'); };
+    sb.appendChild(b);
+  });
+  // Canvas events
+  const getPos = e => {
+    const r = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / r.width;
+    const scaleY = canvas.height / r.height;
+    const src = e.touches ? e.touches[0] : e;
+    return { x: (src.clientX - r.left) * scaleX, y: (src.clientY - r.top) * scaleY };
+  };
+  canvas.addEventListener('mousedown', e => { isDrawing = true; const p = getPos(e); if (stampMode) { placeStamp(p.x,p.y); isDrawing=false; } else { drawCtx.beginPath(); drawCtx.moveTo(p.x,p.y); } });
+  canvas.addEventListener('mousemove', e => { if (!isDrawing || stampMode) return; const p = getPos(e); drawCtx.lineTo(p.x,p.y); drawCtx.strokeStyle = currentColor; drawCtx.lineWidth = brushSize; drawCtx.lineCap = 'round'; drawCtx.lineJoin = 'round'; drawCtx.stroke(); });
+  canvas.addEventListener('mouseup', () => { isDrawing=false; drawCtx.beginPath(); });
+  canvas.addEventListener('mouseleave', () => { isDrawing=false; });
+  canvas.addEventListener('touchstart', e => { e.preventDefault(); isDrawing=true; const p=getPos(e); if(stampMode){placeStamp(p.x,p.y);isDrawing=false;}else{drawCtx.beginPath();drawCtx.moveTo(p.x,p.y);} }, {passive:false});
+  canvas.addEventListener('touchmove', e => { e.preventDefault(); if(!isDrawing||stampMode)return; const p=getPos(e); drawCtx.lineTo(p.x,p.y); drawCtx.strokeStyle=currentColor; drawCtx.lineWidth=brushSize; drawCtx.lineCap='round'; drawCtx.lineJoin='round'; drawCtx.stroke(); }, {passive:false});
+  canvas.addEventListener('touchend', () => { isDrawing=false; drawCtx.beginPath(); });
+}
+function placeStamp(x, y) {
+  drawCtx.font = (brushSize * 4 + 20) + 'px serif';
+  drawCtx.textAlign = 'center';
+  drawCtx.textBaseline = 'middle';
+  drawCtx.fillText(stampMode, x, y);
+}
+function setBrush(size, btn) {
+  brushSize = size;
+  document.querySelectorAll('.brush-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+function clearCanvas() {
+  const canvas = document.getElementById('drawCanvas');
+  drawCtx.clearRect(0, 0, canvas.width, canvas.height);
+}
+function saveCanvas() {
+  const canvas = document.getElementById('drawCanvas');
+  const link = document.createElement('a');
+  link.download = 'my-smile-drawing.png';
+  link.href = canvas.toDataURL();
+  link.click();
+}
+
+/* ═══════════════════════════════════════════════════
+   CROSSWORD
+═══════════════════════════════════════════════════ */
+const CW_DATA = {
+  easy: {
+    size: 8,
+    answers: { '0,0':'B','0,1':'R','0,2':'A','0,3':'C','0,4':'E','0,5':'S', '1,0':'R', '2,0':'I', '3,0':'G', '4,0':'H', '5,0':'T', '2,2':'I','2,3':'N','2,4':'V','2,5':'I','2,6':'S','2,7':'A', '6,2':'S', '7,2':'M', '3,5':'L','3,6':'I','3,7':'P' },
+    blacks: ['1,1','1,2','1,3','1,4','1,5','1,6','1,7','3,1','3,2','3,3','3,4','4,1','4,2','4,3','4,4','4,5','4,6','4,7','5,1','5,2','5,3','5,4','5,5','5,6','5,7','6,0','6,1','6,3','6,4','6,5','6,6','6,7','7,0','7,1','7,3','7,4','7,5','7,6','7,7'],
+    numbered: {'0,0':'1','0,2':'2 (across)','2,2':'3','3,5':'4'},
+    clues: {
+      across: [
+        {n:'1', text:'Orthodontic wires and brackets that straighten teeth (6 letters)'},
+        {n:'2 (across)', text:'Clear, removable aligners made by Align Technology (9 letters — starts at row 2, col 2)'},
+        {n:'4', text:'What Dr. Johnson loves to fix (3 letters — LIP without the U)'},
+      ],
+      down: [
+        {n:'1', text:'City where Dr. Rex Johnson practices (6 letters down — BRIGHT + N)'},
+      ]
+    }
+  },
+  medium: {
+    size: 9,
+    answers: {
+      '0,0':'O','0,1':'R','0,2':'T','0,3':'H','0,4':'O','0,5':'D','0,6':'O','0,7':'N','0,8':'T',
+      '1,0':'R',
+      '2,0':'A','2,2':'F','2,3':'L','2,4':'O','2,5':'S','2,6':'S',
+      '3,0':'L','3,2':'F',
+      '4,0':'I','4,2':'I','4,3':'L','4,4':'L','4,5':'E','4,6':'R',
+      '5,0':'G',
+      '6,0':'N','6,2':'W','6,3':'I','6,4':'R','6,5':'E',
+      '7,0':'E',
+      '8,0':'R','8,2':'B','8,3':'I','8,4':'T','8,5':'E'
+    },
+    blacks: ['1,1','1,2','1,3','1,4','1,5','1,6','1,7','1,8','2,1','2,7','2,8','3,1','3,3','3,4','3,5','3,6','3,7','3,8','4,1','4,7','4,8','5,1','5,2','5,3','5,4','5,5','5,6','5,7','5,8','6,1','6,6','6,7','6,8','7,1','7,2','7,3','7,4','7,5','7,6','7,7','7,8','8,1','8,6','8,7','8,8'],
+    numbered: {'0,0':'1','2,0':'2','2,2':'3','4,2':'4','6,2':'5','8,2':'6'},
+    clues: {
+      across: [
+        {n:'1', text:'The dental specialist who straightens teeth (9 letters)'},
+        {n:'3', text:'String you use to clean between teeth (5 letters)'},
+        {n:'4', text:'A tooth-colored material used to fill cavities (6 letters)'},
+        {n:'5', text:'Metal strand that connects braces brackets (4 letters)'},
+        {n:'6', text:'When your top and bottom teeth fit together (4 letters)'},
+      ],
+      down: [
+        {n:'1', text:'Short for orthodontist (4 letters — ORAL without OAL)'},
+        {n:'2', text:'Brighton, ___ (state abbreviation — 2 letters)'},
+      ]
+    }
+  }
+};
+
+function loadCrossword(level, btn) {
+  document.querySelectorAll('#modal-crossword .level-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  const d = CW_DATA[level];
+  const grid = [];
+  for (let r = 0; r < d.size; r++) { grid[r] = []; for (let c = 0; c < d.size; c++) grid[r][c] = ''; }
+  let html = `<div class="cw-layout"><div>`;
+  html += `<div class="cw-grid" style="grid-template-columns:repeat(${d.size},38px);grid-template-rows:repeat(${d.size},38px);">`;
+  for (let r = 0; r < d.size; r++) {
+    for (let c = 0; c < d.size; c++) {
+      const key = r+','+c;
+      const isBlack = d.blacks.includes(key);
+      const num = d.numbered[key] || '';
+      if (isBlack) {
+        html += `<div class="cw-cell"><input class="black" disabled tabindex="-1"></div>`;
+      } else {
+        html += `<div class="cw-cell">${num?`<span class="cw-num">${num}</span>`:''}<input maxlength="1" data-key="${key}" data-answer="${d.answers[key]||''}" oninput="cwCheck(this)" aria-label="Cell ${r},${c}"></div>`;
+      }
+    }
+  }
+  html += `</div>`;
+  html += `<div class="cw-actions"><button class="game-btn game-btn-gold" onclick="cwReveal()">💡 Reveal All</button><button class="game-btn game-btn-red" onclick="cwClear()">↺ Clear</button><span class="cw-score" id="cwScore"></span></div>`;
+  html += `</div><div class="cw-clues">`;
+  html += `<h4>ACROSS</h4>`;
+  d.clues.across.forEach(cl => html += `<div class="cw-clue"><strong>${cl.n}.</strong> ${cl.text}</div>`);
+  html += `<h4>DOWN</h4>`;
+  d.clues.down.forEach(cl => html += `<div class="cw-clue"><strong>${cl.n}.</strong> ${cl.text}</div>`);
+  html += `</div></div>`;
+  document.getElementById('cwContent').innerHTML = html;
+}
+function cwCheck(inp) {
+  const val = inp.value.toUpperCase();
+  const ans = inp.dataset.answer;
+  if (!val) { inp.classList.remove('correct','wrong'); return; }
+  if (val === ans) { inp.classList.add('correct'); inp.classList.remove('wrong'); }
+  else { inp.classList.add('wrong'); inp.classList.remove('correct'); }
+  const all = document.querySelectorAll('#cwContent input:not(.black)');
+  const correct = [...all].filter(i => i.classList.contains('correct')).length;
+  document.getElementById('cwScore').textContent = `✓ ${correct} / ${all.length}`;
+  if (correct === all.length) document.getElementById('cwScore').textContent = '🎉 Puzzle Complete!';
+}
+function cwReveal() {
+  document.querySelectorAll('#cwContent input:not(.black)').forEach(inp => {
+    inp.value = inp.dataset.answer;
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+  });
+  document.getElementById('cwScore').textContent = '💡 Revealed!';
+}
+function cwClear() {
+  document.querySelectorAll('#cwContent input:not(.black)').forEach(inp => { inp.value=''; inp.classList.remove('correct','wrong'); });
+  document.getElementById('cwScore').textContent = '';
+}
+
+/* ═══════════════════════════════════════════════════
+   SUDOKU
+═══════════════════════════════════════════════════ */
+let currentSudokuLevel = 'easy';
+let selectedCell = null, sudokuTimerInterval = null, sudokuSeconds = 0;
+let sudokuSolution = [];
+
+const SUDOKU_PUZZLES = {
+  easy: {
+    board: [
+      [5,3,0,0,7,0,0,0,0],[6,0,0,1,9,5,0,0,0],[0,9,8,0,0,0,0,6,0],
+      [8,0,0,0,6,0,0,0,3],[4,0,0,8,0,3,0,0,1],[7,0,0,0,2,0,0,0,6],
+      [0,6,0,0,0,0,2,8,0],[0,0,0,4,1,9,0,0,5],[0,0,0,0,8,0,0,7,9]
+    ],
+    solution: [
+      [5,3,4,6,7,8,9,1,2],[6,7,2,1,9,5,3,4,8],[1,9,8,3,4,2,5,6,7],
+      [8,5,9,7,6,1,4,2,3],[4,2,6,8,5,3,7,9,1],[7,1,3,9,2,4,8,5,6],
+      [9,6,1,5,3,7,2,8,4],[2,8,7,4,1,9,6,3,5],[3,4,5,2,8,6,1,7,9]
+    ]
+  },
+  medium: {
+    board: [
+      [0,0,0,2,6,0,7,0,1],[6,8,0,0,7,0,0,9,0],[1,9,0,0,0,4,5,0,0],
+      [8,2,0,1,0,0,0,4,0],[0,0,4,6,0,2,9,0,0],[0,5,0,0,0,3,0,2,8],
+      [0,0,9,3,0,0,0,7,4],[0,4,0,0,5,0,0,3,6],[7,0,3,0,1,8,0,0,0]
+    ],
+    solution: [
+      [4,3,5,2,6,9,7,8,1],[6,8,2,5,7,1,4,9,3],[1,9,7,8,3,4,5,6,2],
+      [8,2,6,1,9,5,3,4,7],[3,7,4,6,8,2,9,1,5],[9,5,1,7,4,3,6,2,8],
+      [5,1,9,3,2,6,8,7,4],[2,4,8,9,5,7,1,3,6],[7,6,3,4,1,8,2,5,9]
+    ]
+  },
+  hard: {
+    board: [
+      [0,0,0,6,0,0,4,0,0],[7,0,0,0,0,3,6,0,0],[0,0,0,0,9,1,0,8,0],
+      [0,0,0,0,0,0,0,0,0],[0,5,0,1,8,0,0,0,3],[0,0,0,3,0,6,0,4,5],
+      [0,4,0,2,0,0,0,6,0],[9,0,3,0,0,0,0,0,0],[0,2,0,0,0,0,1,0,0]
+    ],
+    solution: [
+      [5,8,1,6,7,2,4,3,9],[7,9,2,8,4,3,6,5,1],[3,6,4,5,9,1,7,8,2],
+      [4,3,8,9,5,7,2,1,6],[2,5,6,1,8,4,9,7,3],[1,7,9,3,2,6,8,4,5],
+      [8,4,5,2,1,9,3,6,7],[9,1,3,7,6,8,5,2,4],[6,2,7,4,3,5,1,9,8]
+    ]
+  }
+};
+
+function loadSudoku(level, btn) {
+  currentSudokuLevel = level;
+  document.querySelectorAll('#modal-sudoku .level-tab').forEach(t => t.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  stopSudokuTimer();
+  sudokuSeconds = 0;
+  updateSudokuTimer();
+  startSudokuTimer();
+  selectedCell = null;
+  const puzzle = JSON.parse(JSON.stringify(SUDOKU_PUZZLES[level]));
+  sudokuSolution = SUDOKU_PUZZLES[level].solution;
+  const grid = document.getElementById('sudokuGrid');
+  grid.innerHTML = '';
+  for (let r = 0; r < 9; r++) {
+    for (let c = 0; c < 9; c++) {
+      const val = puzzle.board[r][c];
+      const cell = document.createElement('div');
+      cell.className = 's-cell' + (val ? ' given' : ' editable');
+      cell.dataset.r = r; cell.dataset.c = c;
+      cell.textContent = val || '';
+      if (c === 2 || c === 5) cell.classList.add('box-right');
+      if (r === 2 || r === 5) cell.classList.add('box-bottom');
+      if (!val) cell.addEventListener('click', () => selectSudokuCell(cell));
+      grid.appendChild(cell);
+    }
+  }
+  // Numpad
+  const np = document.getElementById('sudokuNumpad');
+  np.innerHTML = '';
+  for (let n = 1; n <= 9; n++) {
+    const b = document.createElement('button');
+    b.className = 'numpad-btn'; b.textContent = n;
+    b.onclick = () => enterSudokuNum(n);
+    np.appendChild(b);
+  }
+  const er = document.createElement('button');
+  er.className = 'numpad-btn numpad-erase'; er.textContent = '⌫ Erase';
+  er.onclick = () => enterSudokuNum(0);
+  np.appendChild(er);
+}
+function selectSudokuCell(cell) {
+  document.querySelectorAll('.s-cell').forEach(c => c.classList.remove('selected'));
+  cell.classList.add('selected');
+  selectedCell = cell;
+}
+function enterSudokuNum(n) {
+  if (!selectedCell) return;
+  selectedCell.textContent = n || '';
+  selectedCell.classList.remove('error');
+}
+function sudokuCheck() {
+  let allCorrect = true;
+  document.querySelectorAll('.s-cell.editable').forEach(cell => {
+    const r = parseInt(cell.dataset.r), c = parseInt(cell.dataset.c);
+    const val = parseInt(cell.textContent) || 0;
+    if (val === 0) { allCorrect = false; return; }
+    if (val !== sudokuSolution[r][c]) { cell.classList.add('error'); allCorrect = false; }
+    else { cell.classList.remove('error'); }
+  });
+  if (allCorrect) { stopSudokuTimer(); alert('🎉 Puzzle solved! Amazing job!'); }
+}
+function startSudokuTimer() { sudokuTimerInterval = setInterval(() => { sudokuSeconds++; updateSudokuTimer(); }, 1000); }
+function stopSudokuTimer() { clearInterval(sudokuTimerInterval); }
+function updateSudokuTimer() {
+  const m = Math.floor(sudokuSeconds / 60), s = sudokuSeconds % 60;
+  document.getElementById('sudokuTimer').textContent = `⏱ ${m}:${s.toString().padStart(2,'0')}`;
+}
+
+/* ═══════════════════════════════════════════════════
+   LEARN & PLAY
+═══════════════════════════════════════════════════ */
+let currentLearnMode = 'abc';
+const ABC_DATA = {
+  A:{word:'Apple',emoji:'🍎'},B:{word:'Braces',emoji:'🦷'},C:{word:'Cat',emoji:'🐱'},
+  D:{word:'Dog',emoji:'🐶'},E:{word:'Elephant',emoji:'🐘'},F:{word:'Frog',emoji:'🐸'},
+  G:{word:'Giraffe',emoji:'🦒'},H:{word:'Hat',emoji:'🎩'},I:{word:'Ice Cream',emoji:'🍦'},
+  J:{word:'Jellyfish',emoji:'🪼'},K:{word:'Kite',emoji:'🪁'},L:{word:'Lion',emoji:'🦁'},
+  M:{word:'Moon',emoji:'🌙'},N:{word:'Nest',emoji:'🪹'},O:{word:'Orthodontist',emoji:'😁'},
+  P:{word:'Penguin',emoji:'🐧'},Q:{word:'Queen',emoji:'👑'},R:{word:'Rainbow',emoji:'🌈'},
+  S:{word:'Smile',emoji:'😄'},T:{word:'Tooth',emoji:'🦷'},U:{word:'Umbrella',emoji:'☂️'},
+  V:{word:'Violin',emoji:'🎻'},W:{word:'Whale',emoji:'🐳'},X:{word:'Xylophone',emoji:'🎵'},
+  Y:{word:'Yo-yo',emoji:'🪀'},Z:{word:'Zebra',emoji:'🦓'}
+};
+const LETTER_COLORS = ['#ff6b9d','#9b5de5','#f7931e','#00c896','#3b9ae1','#1a8fa0'];
+
+let mathLevel='add', mathScore=0, mathQ=0, mathA=0, mathCorrect=0, mathTotal=0;
+
+const FACTS = [
+  {cat:'Dr. Rex', emoji:'👨‍⚕️', text:'Dr. Rex Johnson earned his orthodontic specialty from the University of Minnesota — one of the top programs in the entire country!'},
+  {cat:'Teeth Fact', emoji:'🦷', text:'You have 32 adult teeth — but babies start with 20 tiny "baby" teeth hidden inside their gums at birth!'},
+  {cat:'Braces', emoji:'🔩', text:'Braces have been around for over 300 years! Ancient Egyptians even wrapped catgut cord around teeth to move them.'},
+  {cat:'Invisalign', emoji:'✨', text:'Invisalign aligners are made from a special clear plastic and are replaced every 1–2 weeks as your teeth move!'},
+  {cat:'Smile Science', emoji:'😁', text:'Smiling uses up to 12 muscles in your face. Frowning uses up to 11. Either way, your face is getting a workout!'},
+  {cat:'Did You Know?', emoji:'🌟', text:'Tooth enamel is the hardest substance your body makes — even harder than bone! But sugar and acid can still damage it.'},
+  {cat:'Retainers', emoji:'🛡️', text:'After braces come off, your retainer is what keeps your teeth in their new, beautiful position. Wear it every night!'},
+  {cat:'Dr. Rex', emoji:'📍', text:'Rex Johnson Orthodontics is right here in Brighton, CO at 481 S. 8th Ave. Patients drive from as far as 45 minutes away to visit!'},
+  {cat:'Teeth Fact', emoji:'🔬', text:'Each tooth has a unique "dental fingerprint" — no two teeth in the world are exactly alike, just like snowflakes!'},
+  {cat:'Flossing', emoji:'🧵', text:'If you never flossed, you\'d miss cleaning about 40% of your tooth surfaces. Braces make flossing extra important!'},
+  {cat:'Free Consult!', emoji:'🎁', text:'At Rex Johnson Orthodontics, your first consultation is always FREE. No cost, no pressure — just great smiles!'},
+  {cat:'Smile Science', emoji:'😄', text:'Studies show people who smile more are seen as more trustworthy, successful, and approachable. Start with straight teeth!'},
+];
+
+let factIndex = 0;
+
+function switchLearn(mode, btn) {
+  currentLearnMode = mode;
+  document.querySelectorAll('.learn-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  const el = document.getElementById('learnContent');
+  if (mode === 'abc') el.innerHTML = renderABC();
+  if (mode === 'math') { mathScore=0; mathCorrect=0; mathTotal=0; el.innerHTML = renderMath(); newMathProblem(); }
+  if (mode === 'facts') { factIndex=0; el.innerHTML = renderFacts(); updateFact(); }
+}
+
+function renderABC() {
+  const letters = Object.keys(ABC_DATA);
+  const colors = LETTER_COLORS;
+  return `
+    <div class="abc-display" id="abcDisplay">
+      <div style="color:var(--text-light);font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;">Tap a letter to learn! 👆</div>
+    </div>
+    <div class="abc-grid">
+      ${letters.map((l,i) => `<button class="abc-btn" style="background:${colors[i%colors.length]};" onclick="showLetter('${l}')">${l}</button>`).join('')}
+    </div>`;
+}
+function showLetter(l) {
+  const d = ABC_DATA[l];
+  const el = document.getElementById('abcDisplay');
+  el.innerHTML = `<div class="abc-big-letter pop" style="color:var(--teal);">${l}</div><div class="abc-emoji">${d.emoji}</div><div class="abc-word">${l} is for <strong>${d.word}</strong></div>`;
+}
+
+function renderMath() {
+  return `
+    <div class="level-tabs">
+      <button class="level-tab active" onclick="setMathLevel('add',this)">➕ Add</button>
+      <button class="level-tab" onclick="setMathLevel('sub',this)">➖ Subtract</button>
+      <button class="level-tab" onclick="setMathLevel('mul',this)">✖️ Multiply</button>
+    </div>
+    <div class="math-stats">
+      <div><span class="math-stat-num" id="mathCorrectCount">0</span>Correct</div>
+      <div><span class="math-stat-num" id="mathTotalCount">0</span>Tried</div>
+      <div><span class="math-stat-num" id="mathStreakEl">-</span>Score</div>
+    </div>
+    <div class="math-problem">
+      <div class="math-equation" id="mathEq">?</div>
+      <input class="math-input" id="mathAns" type="number" placeholder="?" onkeydown="if(event.key==='Enter')checkMath()">
+      <br>
+      <div class="math-feedback" id="mathFb"></div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <button class="game-btn game-btn-teal" onclick="checkMath()">✓ Check</button>
+      <button class="game-btn game-btn-gold" onclick="newMathProblem()">⏭ Skip</button>
+    </div>`;
+}
+function setMathLevel(level, btn) {
+  mathLevel = level;
+  mathScore=0; mathCorrect=0; mathTotal=0;
+  document.querySelectorAll('#learnContent .level-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  newMathProblem();
+  updateMathStats();
+}
+function newMathProblem() {
+  let max = mathLevel === 'mul' ? 12 : 20;
+  mathQ = Math.floor(Math.random() * max) + 1;
+  mathA = Math.floor(Math.random() * max) + 1;
+  let eq = '';
+  if (mathLevel === 'add') { eq = `${mathQ} + ${mathA} = ?`; }
+  else if (mathLevel === 'sub') {
+    if (mathA > mathQ) [mathQ, mathA] = [mathA, mathQ];
+    eq = `${mathQ} − ${mathA} = ?`;
+  }
+  else { eq = `${mathQ} × ${mathA} = ?`; }
+  const eqEl = document.getElementById('mathEq');
+  if (eqEl) { eqEl.textContent = eq; eqEl.classList.add('pop'); setTimeout(()=>eqEl.classList.remove('pop'),300); }
+  const ansEl = document.getElementById('mathAns');
+  const fbEl = document.getElementById('mathFb');
+  if (ansEl) ansEl.value = '';
+  if (fbEl) fbEl.textContent = '';
+  if (fbEl) fbEl.className = 'math-feedback';
+}
+function checkMath() {
+  const ans = parseInt(document.getElementById('mathAns').value);
+  if (isNaN(ans)) return;
+  let correct;
+  if (mathLevel === 'add') correct = mathQ + mathA;
+  else if (mathLevel === 'sub') correct = mathQ - mathA;
+  else correct = mathQ * mathA;
+  mathTotal++;
+  const fb = document.getElementById('mathFb');
+  if (ans === correct) {
+    mathCorrect++; mathScore += 10;
+    fb.textContent = ['🎉 Correct!','⭐ Great job!','🔥 Nailed it!','🦷 Toothsome!'][Math.floor(Math.random()*4)];
+    fb.className = 'math-feedback correct';
+    setTimeout(newMathProblem, 900);
+  } else {
+    fb.textContent = `❌ Not quite — the answer is ${correct}. Try the next one!`;
+    fb.className = 'math-feedback wrong';
+    setTimeout(newMathProblem, 1400);
+  }
+  updateMathStats();
+}
+function updateMathStats() {
+  const cc = document.getElementById('mathCorrectCount');
+  const tc = document.getElementById('mathTotalCount');
+  const sc = document.getElementById('mathStreakEl');
+  if (cc) cc.textContent = mathCorrect;
+  if (tc) tc.textContent = mathTotal;
+  if (sc) sc.textContent = mathScore;
+}
+
+function renderFacts() {
+  return `
+    <div class="facts-card" id="factsCard">
+      <div class="facts-emoji" id="factsEmoji"></div>
+      <div class="facts-category" id="factsCategory"></div>
+      <div class="facts-text" id="factsText"></div>
+    </div>
+    <div class="facts-nav">
+      <button class="facts-nav-btn" onclick="prevFact()">◀</button>
+      <span class="facts-counter" id="factsCounter"></span>
+      <button class="facts-nav-btn" onclick="nextFact()">▶</button>
+    </div>`;
+}
+function updateFact() {
+  const f = FACTS[factIndex];
+  const card = document.getElementById('factsCard');
+  if (card) { card.classList.remove('pop'); void card.offsetWidth; card.classList.add('pop'); }
+  const e = document.getElementById('factsEmoji'), c = document.getElementById('factsCategory'), t = document.getElementById('factsText'), ct = document.getElementById('factsCounter');
+  if (e) e.textContent = f.emoji;
+  if (c) c.textContent = f.cat;
+  if (t) t.textContent = f.text;
+  if (ct) ct.textContent = `${factIndex+1} / ${FACTS.length}`;
+}
+function nextFact() { factIndex = (factIndex + 1) % FACTS.length; updateFact(); }
+function prevFact() { factIndex = (factIndex - 1 + FACTS.length) % FACTS.length; updateFact(); }
+
+/* ═══════════════════════════════════════════════════
+   TRIVIA
+═══════════════════════════════════════════════════ */
+const TRIVIA_QS = [
+  {q:'Where is Rex Johnson Orthodontics located?', opts:['Denver, CO','Brighton, CO','Boulder, CO','Fort Collins, CO'], ans:1, fact:'The office is at 481 S. 8th Ave., Brighton, CO 80601!'},
+  {q:'What is the name of our orthodontist?', opts:['Dr. Rex Harrison','Dr. Rex Johnson','Dr. Rex Williams','Dr. Rod Johnson'], ans:1, fact:'Dr. Rex Johnson is Brighton\'s hometown orthodontist!'},
+  {q:'Which clear, removable aligner treatment does Dr. Johnson offer?', opts:['ClearAlign','SmileDirect','Invisalign®','Bracefix'], ans:2, fact:'Dr. Johnson is a certified Invisalign provider!'},
+  {q:'How old should a child be for their first orthodontic check?', opts:['5 years old','7 years old','10 years old','12 years old'], ans:1, fact:'The AAO recommends a first evaluation by age 7!'},
+  {q:'What is the hardest substance your body makes?', opts:['Bone','Cartilage','Tooth enamel','Muscle'], ans:2, fact:'Tooth enamel is harder than bone — protect it!'},
+  {q:'What do you wear after braces to keep your teeth straight?', opts:['Mouthguard','Retainer','Night guard','Aligner'], ans:1, fact:'Wear your retainer every night to keep that perfect smile!'},
+  {q:'Approximately how many adult teeth do humans have?', opts:['20','28–32','36','40'], ans:1, fact:'Most adults have 28 teeth, or up to 32 with wisdom teeth!'},
+  {q:'Where did Dr. Johnson complete his orthodontic residency?', opts:['University of Colorado','University of Nebraska','University of Minnesota','Harvard University'], ans:2, fact:'His residency was at the University of Minnesota — one of the nation\'s best!'},
+  {q:'What % of tooth surfaces do you miss if you skip flossing?', opts:['10%','20%','30%','40%'], ans:3, fact:'Flossing cleans surfaces your brush can\'t reach!'},
+  {q:'Are consultations at Rex Johnson Orthodontics free?', opts:['Yes, always!','No, $50 fee','Yes, for kids only','No, $25 fee'], ans:0, fact:'Yes! Consultations are always 100% free — no strings attached!'},
+];
+
+let triviaIndex = 0, triviaScore = 0, triviaAnswered = false;
+
+function startTrivia() {
+  triviaIndex = 0; triviaScore = 0;
+  renderTriviaQ();
+}
+function renderTriviaQ() {
+  triviaAnswered = false;
+  const el = document.getElementById('triviaContent');
+  if (triviaIndex >= TRIVIA_QS.length) { renderTriviaResult(); return; }
+  const q = TRIVIA_QS[triviaIndex];
+  const pct = (triviaIndex / TRIVIA_QS.length) * 100;
+  el.innerHTML = `
+    <div class="trivia-progress"><div class="trivia-progress-bar" style="width:${pct}%"></div></div>
+    <div class="trivia-q-num">Question ${triviaIndex+1} of ${TRIVIA_QS.length} · Score: ${triviaScore}</div>
+    <div class="trivia-question">${q.q}</div>
+    <div class="trivia-options">
+      ${q.opts.map((o,i) => `<button class="trivia-opt" onclick="answerTrivia(${i})">${o}</button>`).join('')}
+    </div>
+    <div class="trivia-feedback" id="triviaFb"></div>`;
+}
+function answerTrivia(idx) {
+  if (triviaAnswered) return;
+  triviaAnswered = true;
+  const q = TRIVIA_QS[triviaIndex];
+  const opts = document.querySelectorAll('.trivia-opt');
+  opts.forEach(o => o.disabled = true);
+  const fb = document.getElementById('triviaFb');
+  if (idx === q.ans) {
+    opts[idx].classList.add('correct');
+    triviaScore++;
+    fb.textContent = '✅ Correct! ' + q.fact;
+  } else {
+    opts[idx].classList.add('wrong');
+    opts[q.ans].classList.add('correct');
+    fb.textContent = '❌ Not quite! ' + q.fact;
+  }
+  setTimeout(() => { triviaIndex++; renderTriviaQ(); }, 2000);
+}
+function renderTriviaResult() {
+  const pct = Math.round((triviaScore / TRIVIA_QS.length) * 100);
+  const msg = triviaScore >= 9 ? '🏆 Smile Champion!' : triviaScore >= 7 ? '⭐ Excellent work!' : triviaScore >= 5 ? '👍 Good effort!' : '😊 Keep learning!';
+  document.getElementById('triviaContent').innerHTML = `
+    <div class="trivia-result">
+      <div class="trivia-score-big">${triviaScore}/${TRIVIA_QS.length}</div>
+      <div class="trivia-score-label">${pct}% correct</div>
+      <div class="trivia-message">${msg}</div>
+      <button class="game-btn game-btn-teal" onclick="startTrivia()" style="margin-right:10px;">🔄 Play Again</button>
+      <a href="/#contact" class="game-btn game-btn-gold" style="display:inline-block;">📅 Book Appointment</a>
+    </div>`;
+}
+
+/* ═══════════════════════════════════════════════════
+   WORD SCRAMBLE
+═══════════════════════════════════════════════════ */
+const SCRAMBLE_WORDS = [
+  {word:'BRACES',hint:'Metal brackets that straighten teeth',emoji:'🔩'},
+  {word:'SMILE',hint:'What you show off after treatment',emoji:'😁'},
+  {word:'TOOTH',hint:'You have 32 of these as an adult',emoji:'🦷'},
+  {word:'FLOSS',hint:'String used to clean between teeth',emoji:'🧵'},
+  {word:'RETAINER',hint:'Worn at night to keep teeth straight',emoji:'🛡️'},
+  {word:'WIRE',hint:'Connects your braces brackets',emoji:'〰️'},
+  {word:'ALIGNER',hint:'Clear, removable tray for teeth',emoji:'✨'},
+  {word:'BRUSH',hint:'Use it twice a day on your teeth',emoji:'🪥'},
+  {word:'ENAMEL',hint:'The hard outer layer of your tooth',emoji:'🦷'},
+  {word:'BITE',hint:'How your top and bottom teeth fit together',emoji:'🤭'},
+  {word:'CROWN',hint:'The visible top part of a tooth',emoji:'👑'},
+  {word:'GUM',hint:'Pink tissue that holds your teeth in place',emoji:'🌸'},
+];
+
+let scrambleWord = '', scrambleChosen = [], scrambleLetters = [], scrambleWordScore = 0, scrambleWordTotal = 0;
+
+function startScramble() {
+  scrambleWordScore = 0; scrambleWordTotal = 0;
+  document.getElementById('scrambleContent').innerHTML = '';
+  newScrambleWord();
+}
+function newScrambleWord() {
+  const w = SCRAMBLE_WORDS[Math.floor(Math.random() * SCRAMBLE_WORDS.length)];
+  scrambleWord = w.word;
+  scrambleChosen = Array(scrambleWord.length).fill(null);
+  scrambleLetters = scrambleWord.split('').map((l,i) => ({letter:l, idx:i, used:false}));
+  // Fisher-Yates shuffle
+  for (let i = scrambleLetters.length-1; i>0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [scrambleLetters[i],scrambleLetters[j]] = [scrambleLetters[j],scrambleLetters[i]];
+  }
+  scrambleWordTotal++;
+  renderScramble(w);
+}
+function renderScramble(w) {
+  const el = document.getElementById('scrambleContent');
+  el.innerHTML = `
+    <div class="scramble-score">✓ Solved: ${scrambleWordScore} &nbsp;|&nbsp; Tried: ${scrambleWordTotal}</div>
+    <div class="scramble-display">
+      <div class="scramble-emoji">${w ? w.emoji : ''}</div>
+      <div class="scramble-hint">Hint: ${w ? w.hint : ''}</div>
+      <div class="scramble-answer" id="scrambleAnswer">
+        ${scrambleChosen.map((_,i) => `<div class="scramble-slot" id="slot-${i}" onclick="removeFromSlot(${i})"></div>`).join('')}
+      </div>
+      <div class="scramble-letters" id="scrambleLetters">
+        ${scrambleLetters.map((l,i) => `<div class="scramble-letter" id="sl-${i}" onclick="addToSlot(${i})" style="${l.used?'opacity:0.25;pointer-events:none;':''}">${l.letter}</div>`).join('')}
+      </div>
+      <div class="scramble-feedback" id="scrambleFb"></div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+      <button class="game-btn game-btn-teal" onclick="checkScramble()">✓ Check Word</button>
+      <button class="game-btn game-btn-gold" onclick="newScrambleWord()">⏭ New Word</button>
+      <button class="game-btn" style="background:var(--border);color:var(--navy);" onclick="scrambleClear()">↺ Clear</button>
+    </div>`;
+}
+function addToSlot(letterIdx) {
+  const l = scrambleLetters[letterIdx];
+  if (l.used) return;
+  const slotIdx = scrambleChosen.indexOf(null);
+  if (slotIdx === -1) return;
+  scrambleChosen[slotIdx] = {letter: l.letter, letterIdx};
+  l.used = true;
+  updateScrambleDisplay();
+}
+function removeFromSlot(slotIdx) {
+  const item = scrambleChosen[slotIdx];
+  if (!item) return;
+  scrambleLetters[item.letterIdx].used = false;
+  scrambleChosen[slotIdx] = null;
+  updateScrambleDisplay();
+}
+function updateScrambleDisplay() {
+  scrambleChosen.forEach((item, i) => {
+    const slot = document.getElementById('slot-'+i);
+    if (slot) { slot.textContent = item ? item.letter : ''; slot.classList.toggle('filled', !!item); }
+  });
+  scrambleLetters.forEach((l, i) => {
+    const el = document.getElementById('sl-'+i);
+    if (el) { el.style.opacity = l.used ? '0.25' : '1'; el.style.pointerEvents = l.used ? 'none' : 'auto'; }
+  });
+}
+function checkScramble() {
+  if (scrambleChosen.includes(null)) { document.getElementById('scrambleFb').textContent = '⚠️ Fill all the letters first!'; return; }
+  const guess = scrambleChosen.map(c => c.letter).join('');
+  const fb = document.getElementById('scrambleFb');
+  if (guess === scrambleWord) {
+    scrambleWordScore++;
+    fb.className = 'scramble-feedback win';
+    fb.textContent = ['🎉 You got it!','⭐ Correct!','🦷 Toothsome!','🏆 Nailed it!'][Math.floor(Math.random()*4)];
+    // Show correct slots
+    scrambleChosen.forEach((_,i) => { const s=document.getElementById('slot-'+i); if(s)s.classList.add('correct-slot'); });
+    setTimeout(newScrambleWord, 1200);
+  } else {
+    fb.className = 'scramble-feedback lose';
+    fb.textContent = `❌ Not quite! The word is ${scrambleWord}`;
+    setTimeout(newScrambleWord, 1800);
+  }
+}
+function scrambleClear() {
+  scrambleChosen = scrambleChosen.map((item, i) => { if(item) scrambleLetters[item.letterIdx].used = false; return null; });
+  updateScrambleDisplay();
+  const fb = document.getElementById('scrambleFb');
+  if (fb) { fb.textContent=''; fb.className='scramble-feedback'; }
+}
+</script>
+
+</body>
+</html>
