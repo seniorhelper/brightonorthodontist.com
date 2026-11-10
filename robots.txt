@@ -6,4 +6,4 @@ Allow: /
 # Disallow: /private/
 
 # Sitemap location
-Sitemap: https://www.brightonorthodontist.com/sitemap.xml
+Sitemap: https://brightonorthodontist.com/sitemap.xml
